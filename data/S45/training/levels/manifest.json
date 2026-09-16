@@ -1,0 +1,62 @@
+{
+  "version": "S45",
+  "note": "八档独立训练数据；每档需状态帧+胜负标签",
+  "levels": [
+    {
+      "level_id": 0,
+      "name": "1200以下",
+      "state_frames": 0,
+      "outcome_labels": 0,
+      "dir": "data/S45/training/levels/0"
+    },
+    {
+      "level_id": 1,
+      "name": "1200",
+      "state_frames": 0,
+      "outcome_labels": 0,
+      "dir": "data/S45/training/levels/1"
+    },
+    {
+      "level_id": 2,
+      "name": "1500",
+      "state_frames": 0,
+      "outcome_labels": 0,
+      "dir": "data/S45/training/levels/2"
+    },
+    {
+      "level_id": 3,
+      "name": "1800",
+      "state_frames": 0,
+      "outcome_labels": 0,
+      "dir": "data/S45/training/levels/3"
+    },
+    {
+      "level_id": 4,
+      "name": "2100",
+      "state_frames": 0,
+      "outcome_labels": 0,
+      "dir": "data/S45/training/levels/4"
+    },
+    {
+      "level_id": 5,
+      "name": "2300",
+      "state_frames": 0,
+      "outcome_labels": 0,
+      "dir": "data/S45/training/levels/5"
+    },
+    {
+      "level_id": 6,
+      "name": "2500+",
+      "state_frames": 0,
+      "outcome_labels": 0,
+      "dir": "data/S45/training/levels/6"
+    },
+    {
+      "level_id": 7,
+      "name": "职业",
+      "state_frames": 0,
+      "outcome_labels": 0,
+      "dir": "data/S45/training/levels/7"
+    }
+  ]
+}

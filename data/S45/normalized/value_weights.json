@@ -1,0 +1,25 @@
+{
+  "version": "S45",
+  "calibrated_at": "2026-08-28T23:24:49.641246+00:00",
+  "source": {
+    "url": "simulator://calibration",
+    "name": "简化1v1模拟对局 logistic 校准",
+    "retrieved_at": "",
+    "is_primary": false
+  },
+  "metrics": {
+    "episodes": 400,
+    "accuracy": 0.8540507111935683,
+    "log_loss": 0.38005395590973867,
+    "samples": 1617
+  },
+  "weights": {
+    "w_hp": 4.803844790734476,
+    "w_resource": 0.1669118421149821,
+    "w_kill": 2.6908874855311344,
+    "bias": -0.09059296120835336,
+    "w_economy": 100.0,
+    "w_tower": 100.0
+  },
+  "note": "w_hp/w_resource/w_kill 为 logistic 校准；w_economy/w_tower 为规则初值，待模拟器支持经济/推塔后重校准"
+}

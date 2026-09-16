@@ -1,0 +1,2 @@
+[console_scripts]
+hok-data = hok_decision.cli:main

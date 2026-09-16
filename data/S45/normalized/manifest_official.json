@@ -1,0 +1,35 @@
+{
+  "version": "S45",
+  "fetched_at": "2026-08-28T05:28:46.898958+00:00",
+  "sources": [
+    {
+      "url": "https://pvp.qq.com/web201605/js/herolist.json",
+      "name": "王者荣耀官网英雄列表 JSON",
+      "retrieved_at": "2026-08-28T05:28:46.996057+00:00",
+      "is_primary": true,
+      "file": "herolist.json"
+    },
+    {
+      "url": "https://pvp.qq.com/web201605/js/item.json",
+      "name": "王者荣耀官网装备列表 JSON",
+      "retrieved_at": "2026-08-28T05:28:47.102217+00:00",
+      "is_primary": true,
+      "file": "item.json"
+    },
+    {
+      "url": "https://pvp.qq.com/web201605/js/summoner.json",
+      "name": "王者荣耀官网召唤师技能 JSON",
+      "retrieved_at": "2026-08-28T05:28:47.191759+00:00",
+      "is_primary": true,
+      "file": "summoner.json"
+    }
+  ],
+  "files": [
+    "S45/raw/herolist.json",
+    "S45/raw/item.json",
+    "S45/raw/summoner.json",
+    "S45/normalized/heroes.json",
+    "S45/normalized/items.json",
+    "S45/normalized/summoners.json"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": "S45",
+  "source_image": "微信/小地图截图 416x424",
+  "status": "draft_pending_correction",
+  "coordinate_frame": "图片左上原点，单位px",
+  "notes": [
+    "仅用最新版小地图截图判定英雄/资源/塔/水晶位置",
+    "绿框=本人，蓝框=队友，红框=对手；本图无队友，仅1名对手",
+    "每方9座防御塔，每方8个小型资源点（黄菱形）",
+    "紫色=主宰，黄色大图标=暴君，四个中等黄色=双方红蓝Buff"
+  ],
+  "heroes": [
+    {"id": "self_green", "name": "本人", "side": "blue", "position": [52, 350], "confidence": 0.9},
+    {"id": "enemy_red_1", "name": "对手", "side": "red", "position": [302, 42], "confidence": 0.9}
+  ],
+  "crystals": [
+    {"id": "crystal_blue", "side": "blue", "position": [25, 395], "confidence": 0.7},
+    {"id": "crystal_red", "side": "red", "position": [397, 28], "confidence": 0.7}
+  ],
+  "towers_blue": [
+    [36, 78], [36, 142], [36, 208],
+    [75, 383], [135, 389], [198, 390],
+    [52, 330], [105, 310], [35, 330]
+  ],
+  "towers_red": [
+    [62, 24], [158, 26], [262, 28],
+    [386, 140], [382, 265], [378, 325],
+    [350, 60], [360, 180], [395, 25]
+  ],
+  "small_resource_blue": [
+    [88, 83], [45, 120], [55, 170], [70, 222],
+    [112, 300], [160, 342], [210, 332], [260, 300]
+  ],
+  "small_resource_red": [
+    [122, 60], [168, 55], [218, 82], [258, 96],
+    [303, 122], [348, 148], [383, 183], [352, 220]
+  ],
+  "bosses_and_buffs": [
+    {"id": "overlord", "name": "主宰", "position": [135, 115], "confidence": 0.9},
+    {"id": "tyrant", "name": "暴君", "position": [285, 205], "confidence": 0.9},
+    {"id": "buff_1", "name": "蓝方BuffA", "position": [118, 262], "confidence": 0.7},
+    {"id": "buff_2", "name": "蓝方BuffB", "position": [75, 315], "confidence": 0.7},
+    {"id": "buff_3", "name": "红方BuffA", "position": [332, 120], "confidence": 0.7},
+    {"id": "buff_4", "name": "红方BuffB", "position": [360, 258], "confidence": 0.7}
+  ],
+  "coverage": {
+    "heroes_detected": 2,
+    "crystals": 2,
+    "towers_blue": 9,
+    "towers_red": 9,
+    "small_resource_blue": 8,
+    "small_resource_red": 8,
+    "bosses": 2,
+    "buffs": 4
+  }
+}

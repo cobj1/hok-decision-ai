@@ -1,0 +1,1118 @@
+{
+  "version": "S45",
+  "generated_by": "deepseek-v4-flash-vision-exp",
+  "status": "draft_pending_review",
+  "per_image": [
+    {
+      "image_id": "18183_monster_map",
+      "file": "data/S45/raw/map_images/18183_monster_map_600x438.jpg",
+      "width": 600,
+      "height": 438,
+      "quality_note": "社区攻略低清完整地图，带 A-D 红字和塔/野怪图标；构图可用，但细节不足以精确标定多数锚点。",
+      "detections": [
+        {
+          "anchor_id": "fountain_blue",
+          "position": [
+            115,
+            365
+          ],
+          "confidence": 0.85,
+          "evidence": "蓝方泉水水晶底座可见",
+          "notes": ""
+        },
+        {
+          "anchor_id": "fountain_red",
+          "position": [
+            490,
+            100
+          ],
+          "confidence": 0.85,
+          "evidence": "红方泉水水晶底座可见",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "蓝方塔图标可见但无法可靠区分路/层级",
+          "notes": "低清图中蓝塔图标多，暂不标定"
+        },
+        {
+          "anchor_id": "tower_blue_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "红方塔图标可见但无法可靠区分路/层级",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "A/B/C/D 红字区域疑似野怪，但无文字标签且图标与塔/龙坑难区分",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tyrant",
+          "position": null,
+          "confidence": 0,
+          "evidence": "图中红色/蓝色野怪可能包含暴君，但无标注且低清无法确认",
+          "notes": ""
+        },
+        {
+          "anchor_id": "overlord",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "storm_dragon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无风暴龙王标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_falcon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无红隼标注/无法确认",
+          "notes": ""
+        },
+        {
+          "anchor_id": "space_spirit",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无空间之灵标注",
+          "notes": ""
+        }
+      ],
+      "extra_detections": []
+    },
+    {
+      "image_id": "360kuai_kpl_map",
+      "file": "data/S45/raw/map_images/360kuai_kpl_map_2000x1021.jpg",
+      "width": 2000,
+      "height": 1021,
+      "quality_note": "高分辨率 3D 俯视地图，无 UI/文字；底图质量高，但资源点无标签，只标可结构确定的泉水。",
+      "detections": [
+        {
+          "anchor_id": "fountain_blue",
+          "position": [
+            175,
+            980
+          ],
+          "confidence": 0.8,
+          "evidence": "左下蓝方泉水大型蓝色水晶",
+          "notes": ""
+        },
+        {
+          "anchor_id": "fountain_red",
+          "position": [
+            1570,
+            120
+          ],
+          "confidence": 0.8,
+          "evidence": "右上红方泉水大型橙红水晶",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "蓝方塔基座可见但 3D 图无标签且易与石堆混淆",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "红方塔基座可见但 3D 图无标签且易与石堆混淆",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "野怪无标签，未确认具体红蓝Buff位置",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "野怪无标签，未确认具体红蓝Buff位置",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tyrant",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未见明确暴君龙坑/怪物，无法确认",
+          "notes": ""
+        },
+        {
+          "anchor_id": "overlord",
+          "position": null,
+          "confidence": 0,
+          "evidence": "可能的水池/龙坑无标注，无法可靠区分",
+          "notes": ""
+        },
+        {
+          "anchor_id": "storm_dragon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无风暴龙王标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_falcon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无红隼标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "space_spirit",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无空间之灵标注",
+          "notes": ""
+        }
+      ],
+      "extra_detections": []
+    },
+    {
+      "image_id": "baidu_newbie_map",
+      "file": "data/S45/raw/map_images/baidu_newbie_map_538x500.jpg",
+      "width": 538,
+      "height": 500,
+      "quality_note": "新手分区示意图，用色块/文字标注野区与河道，适合区域边界理解，不适合像素级资源点标定。",
+      "detections": [
+        {
+          "anchor_id": "fountain_blue",
+          "position": [
+            50,
+            430
+          ],
+          "confidence": 0.65,
+          "evidence": "左下蓝方基地水晶可见",
+          "notes": "位置受柔光/装饰影响，中心为估计"
+        },
+        {
+          "anchor_id": "fountain_red",
+          "position": null,
+          "confidence": 0,
+          "evidence": "右上红方基地元素可见但被紫色林地和金光遮挡，未确认中心",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "蓝方塔图标存在但被分区高亮遮挡，未确认",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "红方塔图标存在但被分区高亮遮挡，未确认",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "分区图无具体野怪标定",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "分区图无具体野怪标定",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "分区图无具体野怪标定",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "分区图无具体野怪标定",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tyrant",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无暴君标注/结构不清",
+          "notes": ""
+        },
+        {
+          "anchor_id": "overlord",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无主宰标注/结构不清",
+          "notes": ""
+        },
+        {
+          "anchor_id": "storm_dragon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无风暴龙王标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_falcon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无红隼标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "space_spirit",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无空间之灵标注",
+          "notes": ""
+        }
+      ],
+      "extra_detections": []
+    },
+    {
+      "image_id": "18183_s17_map",
+      "file": "data/S45/raw/map_images/18183_s17_map_600x627.jpg",
+      "width": 600,
+      "height": 627,
+      "quality_note": "文章截图，中央小地图用于说明 S17 河道之灵，适合展示河道之灵刷新点，不能作为完整地形底图。",
+      "detections": [
+        {
+          "anchor_id": "fountain_blue",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图中蓝方泉水被遮挡/缩放过小，未确认",
+          "notes": ""
+        },
+        {
+          "anchor_id": "fountain_red",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图中红方泉水区过小，未确认",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图塔图标过小，未确认坐标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图无Buff标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图无Buff标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图无Buff标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图无Buff标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tyrant",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图无法确认龙坑",
+          "notes": ""
+        },
+        {
+          "anchor_id": "overlord",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图无法确认龙坑",
+          "notes": ""
+        },
+        {
+          "anchor_id": "storm_dragon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无风暴龙王标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_falcon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无红隼标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "space_spirit",
+          "position": null,
+          "confidence": 0,
+          "evidence": "图中标注为河道之灵而非空间之灵，未直接关联",
+          "notes": ""
+        }
+      ],
+      "extra_detections": [
+        {
+          "anchor_id": "river_spirit_spawn_1",
+          "position": [
+            272,
+            386
+          ],
+          "confidence": 0.8,
+          "evidence": "小地图红框标注河道之灵刷新点1",
+          "notes": "仅作补充，未映射到 space_spirit"
+        },
+        {
+          "anchor_id": "river_spirit_spawn_2",
+          "position": [
+            333,
+            420
+          ],
+          "confidence": 0.8,
+          "evidence": "小地图红框标注河道之灵刷新点2",
+          "notes": "仅作补充，未映射到 space_spirit"
+        }
+      ]
+    },
+    {
+      "image_id": "9game_fullview_map",
+      "file": "data/S45/raw/map_images/9game_fullview_map_500x281.png",
+      "width": 500,
+      "height": 281,
+      "quality_note": "游戏对局实拍（实景+左上角小地图），不是完整俯视地图，无法做正式锚点标定。",
+      "detections": [
+        {
+          "anchor_id": "fountain_blue",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "fountain_red",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "tower_blue_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "tower_blue_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "tower_blue_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "tower_red_1",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "tower_red_2",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "tower_red_3",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "red_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "blue_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "red_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "blue_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "tyrant",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "overlord",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "storm_dragon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "red_falcon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        },
+        {
+          "anchor_id": "space_spirit",
+          "position": null,
+          "confidence": 0,
+          "evidence": "未观测到确定锚点",
+          "notes": "图上未确认该锚点，位置留空"
+        }
+      ],
+      "extra_detections": []
+    },
+    {
+      "image_id": "baike_wangzhexiagu",
+      "file": "data/S45/raw/map_images/baike_wangzhexiagu_1200x696.jpg",
+      "width": 1200,
+      "height": 696,
+      "quality_note": "百度百科完整俯视图，清晰无 UI 遮挡，适合做正式底图；但无文字标签，龙坑/野怪按结构判断。",
+      "detections": [
+        {
+          "anchor_id": "fountain_blue",
+          "position": [
+            340,
+            523
+          ],
+          "confidence": 0.9,
+          "evidence": "蓝方泉水大型蓝色水晶",
+          "notes": ""
+        },
+        {
+          "anchor_id": "fountain_red",
+          "position": [
+            890,
+            100
+          ],
+          "confidence": 0.9,
+          "evidence": "红方泉水大型红/橙水晶",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_1",
+          "position": [
+            330,
+            405
+          ],
+          "confidence": 0.8,
+          "evidence": "蓝方上路塔基座蓝色水晶",
+          "notes": "对应蓝方上/对抗路塔，具体 tier 待人工复核"
+        },
+        {
+          "anchor_id": "tower_blue_2",
+          "position": [
+            523,
+            407
+          ],
+          "confidence": 0.78,
+          "evidence": "蓝方中路附近塔基座蓝色水晶",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_3",
+          "position": [
+            843,
+            607
+          ],
+          "confidence": 0.8,
+          "evidence": "蓝方下路外侧塔基座蓝色水晶",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_1",
+          "position": [
+            548,
+            56
+          ],
+          "confidence": 0.8,
+          "evidence": "红方上路边塔红色塔柱",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_2",
+          "position": [
+            727,
+            143
+          ],
+          "confidence": 0.78,
+          "evidence": "红方中路附近红色塔柱",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_3",
+          "position": [
+            937,
+            161
+          ],
+          "confidence": 0.78,
+          "evidence": "红方右/下路红色塔柱",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff",
+          "position": [
+            566,
+            477
+          ],
+          "confidence": 0.85,
+          "evidence": "蓝方野区红/橙色石像怪",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff",
+          "position": [
+            420,
+            320
+          ],
+          "confidence": 0.7,
+          "evidence": "蓝方野区蓝色水晶石像",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "红方红buff未找到可确证的红色野怪/石像",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff_red_side",
+          "position": [
+            810,
+            285
+          ],
+          "confidence": 0.7,
+          "evidence": "红方野区蓝色水晶石像",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tyrant",
+          "position": [
+            772,
+            415
+          ],
+          "confidence": 0.6,
+          "evidence": "下路河道大型圆形龙坑，附近有红色龙形怪",
+          "notes": "坑中心取圆环中心；红龙本体实际约 (663,448)"
+        },
+        {
+          "anchor_id": "overlord",
+          "position": [
+            566,
+            171
+          ],
+          "confidence": 0.7,
+          "evidence": "上路河道大型圆形龙坑/主宰坑",
+          "notes": ""
+        },
+        {
+          "anchor_id": "storm_dragon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无风暴龙王标注，无法与普通龙坑区分",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_falcon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "疑似红隼小红怪(约960,260)但无法确认，不作为高置信",
+          "notes": ""
+        },
+        {
+          "anchor_id": "space_spirit",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无空间之灵标注",
+          "notes": ""
+        }
+      ],
+      "extra_detections": [
+        {
+          "anchor_id": "tower_blue_4",
+          "position": [
+            467,
+            584
+          ],
+          "confidence": 0.75,
+          "evidence": "蓝方下路高地/内塔蓝色水晶",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_5",
+          "position": [
+            602,
+            598
+          ],
+          "confidence": 0.75,
+          "evidence": "蓝方下路塔蓝色水晶",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_6",
+          "position": [
+            436,
+            460
+          ],
+          "confidence": 0.7,
+          "evidence": "蓝方中路/基地附近蓝色塔",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_4",
+          "position": [
+            1008,
+            422
+          ],
+          "confidence": 0.75,
+          "evidence": "红方右下路红色塔柱",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_5",
+          "position": [
+            705,
+            62
+          ],
+          "confidence": 0.7,
+          "evidence": "红方上路边塔红色塔柱",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_6",
+          "position": [
+            644,
+            149
+          ],
+          "confidence": 0.65,
+          "evidence": "红方中/上路间红色塔柱",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tyrant_monster_visual",
+          "position": null,
+          "confidence": 0.55,
+          "evidence": "红色龙形怪本体",
+          "notes": "与 tyrant 坑中心(772,415)不同，供人工判断；低置信坐标已按规则置空（原观测约663,448）"
+        }
+      ]
+    },
+    {
+      "image_id": "pvp_official_jungle_map",
+      "file": "data/S45/raw/map_images/pvp_official_jungle_map_640x360.jpg",
+      "width": 640,
+      "height": 360,
+      "quality_note": "官方野区分析图，左侧游戏小地图（红/蓝塔、彩色野怪点清晰），右侧 3D 场景；可作为小地图参考，但非完整正交俯视图。",
+      "detections": [
+        {
+          "anchor_id": "fountain_blue",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图中泉水被英雄头像/UI遮挡，未确认",
+          "notes": ""
+        },
+        {
+          "anchor_id": "fountain_red",
+          "position": null,
+          "confidence": 0,
+          "evidence": "小地图中泉水被英雄头像/UI遮挡，未确认",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_1",
+          "position": [
+            35,
+            95
+          ],
+          "confidence": 0.75,
+          "evidence": "小地图左侧蓝色塔图标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_2",
+          "position": [
+            35,
+            240
+          ],
+          "confidence": 0.7,
+          "evidence": "小地图左侧偏下蓝色塔图标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_3",
+          "position": [
+            68,
+            294
+          ],
+          "confidence": 0.7,
+          "evidence": "小地图左下蓝色塔图标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_1",
+          "position": [
+            104,
+            19
+          ],
+          "confidence": 0.8,
+          "evidence": "小地图顶部红色塔图标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_2",
+          "position": [
+            207,
+            19
+          ],
+          "confidence": 0.8,
+          "evidence": "小地图顶部红色塔图标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_3",
+          "position": [
+            267,
+            23
+          ],
+          "confidence": 0.78,
+          "evidence": "小地图顶部红色塔图标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "彩色野怪点无法可靠对应红Buff",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff",
+          "position": null,
+          "confidence": 0,
+          "evidence": "彩色野怪点无法可靠对应蓝Buff",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "blue_buff_red_side",
+          "position": null,
+          "confidence": 0,
+          "evidence": "同上",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tyrant",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无龙坑结构/标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "overlord",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无龙坑结构/标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "storm_dragon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无风暴龙王标注",
+          "notes": ""
+        },
+        {
+          "anchor_id": "red_falcon",
+          "position": null,
+          "confidence": 0,
+          "evidence": "彩色点可能是野怪但无法确认红隼",
+          "notes": ""
+        },
+        {
+          "anchor_id": "space_spirit",
+          "position": null,
+          "confidence": 0,
+          "evidence": "无空间之灵标注",
+          "notes": ""
+        }
+      ],
+      "extra_detections": [
+        {
+          "anchor_id": "tower_red_4",
+          "position": [
+            342,
+            97
+          ],
+          "confidence": 0.8,
+          "evidence": "小地图右侧红色塔图标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_5",
+          "position": [
+            346,
+            158
+          ],
+          "confidence": 0.8,
+          "evidence": "小地图右侧红色塔图标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_red_6",
+          "position": [
+            346,
+            261
+          ],
+          "confidence": 0.8,
+          "evidence": "小地图右侧红色塔图标",
+          "notes": ""
+        },
+        {
+          "anchor_id": "tower_blue_4",
+          "position": [
+            148,
+            339
+          ],
+          "confidence": 0.7,
+          "evidence": "小地图底部蓝色塔图标",
+          "notes": ""
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_detections": 119,
+    "high_confidence": 24,
+    "null_anchors": 95,
+    "low_confidence_positions_cleared": 1
+  }
+}

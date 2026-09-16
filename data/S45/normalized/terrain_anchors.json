@@ -1,0 +1,620 @@
+{
+  "version": "S45",
+  "name": "王者峡谷地形/资源锚点（小地图像素坐标）",
+  "reference_image": "minimap_s45_manual",
+  "coordinate_system_ref": "terrain.json#coordinate_system",
+  "anchors": [
+    {
+      "id": "tower_red_1",
+      "name": "红方塔1",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        139.6,
+        21.0
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_blue_1",
+      "name": "蓝方塔1",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        30.6,
+        118.8
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_red_2",
+      "name": "红方塔2",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        226.1,
+        21.0
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_blue_2",
+      "name": "蓝方塔2",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        36.0,
+        219.9
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_red_3",
+      "name": "红方塔3",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        317.6,
+        21.0
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_blue_3",
+      "name": "蓝方塔3",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        173.3,
+        228.6
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_red_4",
+      "name": "红方塔4",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        340.1,
+        70.1
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_blue_4",
+      "name": "蓝方塔4",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        139.6,
+        277.3
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_red_5",
+      "name": "红方塔5",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        394.2,
+        94.7
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_blue_5",
+      "name": "蓝方塔5",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        36.0,
+        292.3
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_red_6",
+      "name": "红方塔6",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        288.1,
+        113.0
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_blue_6",
+      "name": "蓝方塔6",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        89.6,
+        319.8
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_red_7",
+      "name": "红方塔7",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        259.8,
+        161.7
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_blue_7",
+      "name": "蓝方塔7",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        309.3,
+        365.5
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_red_8",
+      "name": "红方塔8",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        398.3,
+        168.3
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_blue_8",
+      "name": "蓝方塔8",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        116.7,
+        370.5
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_red_9",
+      "name": "红方塔9",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        394.2,
+        287.3
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tower_blue_9",
+      "name": "蓝方塔9",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        202.8,
+        370.5
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "blue_buff_red_side",
+      "name": "红方蓝Buff",
+      "kind": "buff",
+      "side": "red",
+      "position": [
+        202.8,
+        80.1
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "red_buff",
+      "name": "蓝方红Buff",
+      "kind": "buff",
+      "side": "blue",
+      "position": [
+        129.4,
+        183.5
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "red_buff_red_side",
+      "name": "红方红Buff",
+      "kind": "buff",
+      "side": "red",
+      "position": [
+        303.5,
+        202.4
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "blue_buff",
+      "name": "蓝方蓝Buff",
+      "kind": "buff",
+      "side": "blue",
+      "position": [
+        229.4,
+        303.1
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "overlord",
+      "name": "主宰",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": [
+        150.4,
+        112.6
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "tyrant",
+      "name": "暴君",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": [
+        284.3,
+        276.9
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "space_spirit",
+      "name": "空间之灵",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": [
+        42.0,
+        21.2
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "red_falcon",
+      "name": "红隼",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": [
+        398.1,
+        374.5
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "fountain_red",
+      "name": "红方水晶",
+      "kind": "other",
+      "side": "red",
+      "position": [
+        374.4,
+        33.3
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "fountain_blue",
+      "name": "蓝方水晶",
+      "kind": "other",
+      "side": "blue",
+      "position": [
+        57.6,
+        353.1
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_blue_1",
+      "name": "blue小型资源1",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        89.6,
+        118.8
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_blue_2",
+      "name": "blue小型资源2",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        78.8,
+        178.1
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_blue_3",
+      "name": "blue小型资源3",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        99.4,
+        228.6
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_blue_4",
+      "name": "blue小型资源4",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        203.2,
+        257.8
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_blue_5",
+      "name": "blue小型资源5",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        165.8,
+        303.1
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_blue_6",
+      "name": "blue小型资源6",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        278.9,
+        333.1
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_red_1",
+      "name": "red小型资源1",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        150.4,
+        55.5
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_red_2",
+      "name": "red小型资源2",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        268.3,
+        75.7
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_red_3",
+      "name": "red小型资源3",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        226.1,
+        123.8
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_red_4",
+      "name": "red小型资源4",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        333.4,
+        155.0
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_red_5",
+      "name": "red小型资源5",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        357.6,
+        202.0
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "small_red_6",
+      "name": "red小型资源6",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        340.1,
+        267.8
+      ],
+      "status": "manual_verified",
+      "method": "manual",
+      "source_url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "来自用户人工小地图标注；坐标=416x424左上原点像素"
+    },
+    {
+      "id": "storm_dragon",
+      "name": "风暴龙王",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": null,
+      "status": "unverified",
+      "method": "none",
+      "source_url": "https://news.17173.com/z/pvp/content/07302025/102109377.shtml",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "未在本次人工小地图标注中识别；位置待补"
+    }
+  ]
+}

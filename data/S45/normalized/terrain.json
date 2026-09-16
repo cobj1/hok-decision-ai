@@ -1,0 +1,145 @@
+{
+  "version": "S45",
+  "name": "王者峡谷 5v5 地形锚点基建",
+  "description": "王者峡谷完整地图/小地图候选图源、像素坐标系定义与地形锚点 schema。坐标标注遵循可溯源原则：无可靠来源时留空，不编造。",
+  "images": [
+    {
+      "id": "18183_monster_map",
+      "file": "data/S45/raw/map_images/18183_monster_map_600x438.jpg",
+      "url": "http://img.18183.com/uploads/allimg/170705/36-1FF51K001.jpg",
+      "source_page": "http://www.18183.com/yxzjol/201707/888049.html",
+      "source_title": "王者荣耀王者峡谷地图怪物分布与各BUFF作用详解",
+      "source_level": "community_guide",
+      "width": 600,
+      "height": 438,
+      "format": "jpeg",
+      "retrieved_at": "2026-08-28T06:11:54.512448+00:00",
+      "notes": "疑似完整王者峡谷地图，带野怪/BUFF 分布标注；未做像素级锚点标注。"
+    },
+    {
+      "id": "18183_s17_map",
+      "file": "data/S45/raw/map_images/18183_s17_map_600x627.jpg",
+      "url": "https://c-img.18183.com/images/2019/10/18/966a11f7886d02775ba2a08587213998.jpg@!18183",
+      "source_page": "http://www.18183.com/yxzjol/201910/2432352.html",
+      "source_title": "王者荣耀S17新赛季王者峡谷有哪些变化?王者峡谷优化调整一览!",
+      "source_level": "community_guide",
+      "width": 600,
+      "height": 627,
+      "format": "jpeg",
+      "retrieved_at": "2026-08-28T06:11:54.512448+00:00",
+      "notes": "版本优化调整图，可能含局部/装饰性内容，标定前需人工确认完整地图边界。"
+    },
+    {
+      "id": "360kuai_kpl_map",
+      "file": "data/S45/raw/map_images/360kuai_kpl_map_2000x1021.jpg",
+      "url": "https://p0.ssl.img.360kuai.com/t01f2869bf5b2ace14f.jpg?size=2000x1021",
+      "source_page": "https://www.360kuai.com/pc/9c94db9a996fee1d7?cota=3&kuai_so=1",
+      "source_title": "红方的胜率碾压了蓝方?KPL的败方优先选蓝方,原来并不是福利",
+      "source_level": "community_guide",
+      "width": 2000,
+      "height": 1021,
+      "format": "jpeg",
+      "retrieved_at": "2026-08-28T06:11:54.512448+00:00",
+      "notes": "高分辨率候选图，疑似对局/BP 用完整峡谷地图；需人工复核是否含 UI 偏移。"
+    },
+    {
+      "id": "9game_fullview_map",
+      "file": "data/S45/raw/map_images/9game_fullview_map_500x281.png",
+      "url": "https://image.9game.cn/2017/9/4/17944017.jpg",
+      "source_page": "https://www.9game.cn/news/1896313.html",
+      "source_title": "王者荣耀新版本地图全貌展示 最新王者峡谷效果预览",
+      "source_level": "community_guide",
+      "width": 500,
+      "height": 281,
+      "format": "png",
+      "retrieved_at": "2026-08-28T06:11:54.512448+00:00",
+      "notes": "原标题为地图全貌展示；分辨率较低，仅作构图参考。"
+    },
+    {
+      "id": "baidu_newbie_map",
+      "file": "data/S45/raw/map_images/baidu_newbie_map_538x500.jpg",
+      "url": "https://img0.baidu.com/it/u=2533584148,3392131871&fm=253&fmt=auto&app=138&f=JPEG?w=538&h=500",
+      "source_page": "http://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5520797692466501742",
+      "source_title": "王者荣耀新手必看:王者峡谷地图全解析",
+      "source_level": "community_guide",
+      "width": 538,
+      "height": 500,
+      "format": "jpeg",
+      "retrieved_at": "2026-08-28T06:11:54.512448+00:00",
+      "notes": "接近正方形的峡谷全解析图，适合后续人工标定参考。"
+    },
+    {
+      "id": "baike_wangzhexiagu",
+      "file": "data/S45/raw/map_images/baike_wangzhexiagu_1200x696.jpg",
+      "url": "https://bkimg.cdn.bcebos.com/pic/aa64034f78f0f7367a156ec80155b319eac4130b",
+      "source_page": "https://baike.baidu.com/item/王者峡谷/22365564",
+      "source_title": "百度百科-王者峡谷（《王者荣耀》5 VS 5 地图）概述图",
+      "source_level": "encyclopedia",
+      "width": 1200,
+      "height": 696,
+      "format": "jpeg",
+      "retrieved_at": "2026-08-28T06:11:54.512448+00:00",
+      "notes": "百科概述图，需人工确认是否为完整俯视地图而非原画/概念图。"
+    },
+    {
+      "id": "minimap_s45_manual",
+      "file": "data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+      "source_page": null,
+      "source_title": "用户人工标注小地图（最新版，含40个黑框白方块标记）",
+      "source_level": "manual_reference",
+      "width": 416,
+      "height": 424,
+      "format": "png",
+      "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+      "notes": "人工锁定坐标的参照底图；黑框白方块为用户标注，不用于自动识别"
+    },
+    {
+      "id": "pvp_official_jungle_map",
+      "file": "data/S45/raw/map_images/pvp_official_jungle_map_640x360.jpg",
+      "url": "http://shp.qpic.cn/inewsnopic/449774817/b77962913ae12538bd4f083aa89a5431/0",
+      "source_page": "https://pvp.qq.com/webplat/info/news_version3/15592/15748/15749/15753/m12014/201510/392243.shtml",
+      "source_title": "主宰之怒！《王者荣耀》5V5野区深入分析",
+      "source_level": "official",
+      "width": 640,
+      "height": 360,
+      "format": "jpeg",
+      "retrieved_at": "2026-08-28T06:11:54.512448+00:00",
+      "notes": "官方野区分析配图；文章注明红/蓝/黑/绿点为野怪分布，疑似完整峡谷地图，需人工确认无 UI 偏移。"
+    }
+  ],
+  "coordinate_system": {
+    "origin": "top-left",
+    "axis": {
+      "x": "right",
+      "y": "down"
+    },
+    "unit": "px",
+    "reference_image": "minimap_s45_manual",
+    "scale": {
+      "pixel_to_game": null,
+      "notes": "小地图像素坐标；游戏单位换算待录屏/游戏内测距标定",
+      "status": "unverified"
+    }
+  },
+  "anchor_schema": {
+    "id": "锚点 id；资源点与 data/S45/normalized/map.json 的 resource_points[].id 对齐",
+    "name": "显示名",
+    "kind": "buff|camp|neutral|tower|other",
+    "side": "blue|red|neutral",
+    "position": "[x,y] 小地图像素坐标（416x424，左上原点）；未标定为 null",
+    "status": "verified|programmatic|unverified",
+    "method": "manual|image_processing|web_source|none",
+    "source_url": "坐标来源 URL；无来源则使用机制来源并注明待标定",
+    "retrieved_at": "ISO 8601 UTC",
+    "notes": "说明/待办"
+  },
+  "notes": [
+    "官方未公开 5v5 王者峡谷的资源点像素坐标；网上未发现带明确坐标网格的可信图源。",
+    "当前 terrain_anchors.json 全部锚点 position=null、status=unverified，等待人工标定或录屏地形定位管线回填。",
+    "候选图仅用于人工标定/后续图像配准，不代表任何坐标已被证实。",
+    "坐标系约定：像素原点为图片左上角，x 向右，y 向下；单位 px。",
+    "当前正式锚点坐标为小地图人工标注像素坐标，参考图 minimap_s45_manual。",
+    "资源点口径：每方8个常规资源（6小型+2Buff）+2个中立特殊（空间之灵、红隼）+2龙+18塔+2水晶。"
+  ]
+}

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: hok-decision-ai
+Version: 0.1.0
+Summary: 王者荣耀对局决策建议系统：数据爬取、结构化与确定性模拟环境
+Requires-Python: >=3.11
+Requires-Dist: pydantic>=2.5
+Requires-Dist: requests>=2.31
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"

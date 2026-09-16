@@ -1,0 +1,20 @@
+{
+  "frames": [
+    {
+      "frame_id": "示例帧_001",
+      "game_time_s": 600,
+      "heroes": [
+        {"hero_ename": 105, "side": "self",  "hp_frac": 0.8, "mp_frac": 0.6, "gold": 3200, "position": [52, 350]},
+        {"hero_ename": 106, "side": "ally",  "hp_frac": 0.7, "mp_frac": 0.5, "gold": 2800, "position": [100, 200]},
+        {"hero_ename": 107, "side": "ally",  "hp_frac": 0.7, "mp_frac": 0.5, "gold": 2800, "position": [110, 220]},
+        {"hero_ename": 108, "side": "ally",  "hp_frac": 0.7, "mp_frac": 0.5, "gold": 2800, "position": [120, 240]},
+        {"hero_ename": 109, "side": "ally",  "hp_frac": 0.7, "mp_frac": 0.5, "gold": 2800, "position": [130, 260]},
+        {"hero_ename": 200, "side": "enemy", "hp_frac": 0.75, "mp_frac": 0.55, "gold": 2600, "position": [300, 100]},
+        {"hero_ename": 201, "side": "enemy", "hp_frac": 0.75, "mp_frac": 0.55, "gold": 2600, "position": [310, 120]},
+        {"hero_ename": 202, "side": "enemy", "hp_frac": 0.75, "mp_frac": 0.55, "gold": 2600, "position": [320, 140]},
+        {"hero_ename": 203, "side": "enemy", "hp_frac": 0.75, "mp_frac": 0.55, "gold": 2600, "position": [330, 160]},
+        {"hero_ename": 204, "side": "enemy", "hp_frac": 0.75, "mp_frac": 0.55, "gold": 2600, "position": [340, 180]}
+      ]
+    }
+  ]
+}

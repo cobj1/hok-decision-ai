@@ -1,0 +1,1273 @@
+{
+  "version": "S45",
+  "name": "王者峡谷",
+  "width": null,
+  "height": null,
+  "unit_note": "当前为小地图像素坐标，非游戏地图单位",
+  "lanes": [
+    {
+      "id": "farm",
+      "name": "发育路",
+      "waypoints": [],
+      "notes": "红隼刷新侧"
+    },
+    {
+      "id": "clash",
+      "name": "对抗路",
+      "waypoints": [],
+      "notes": ""
+    },
+    {
+      "id": "mid",
+      "name": "中路",
+      "waypoints": [],
+      "notes": ""
+    }
+  ],
+  "resource_points": [
+    {
+      "id": "tower_red_1",
+      "name": "红方塔1",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        139.6,
+        21.0
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.937897+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_blue_1",
+      "name": "蓝方塔1",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        30.6,
+        118.8
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938206+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_red_2",
+      "name": "红方塔2",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        226.1,
+        21.0
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938208+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_blue_2",
+      "name": "蓝方塔2",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        36.0,
+        219.9
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938210+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_red_3",
+      "name": "红方塔3",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        317.6,
+        21.0
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938212+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_blue_3",
+      "name": "蓝方塔3",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        173.3,
+        228.6
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938213+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_red_4",
+      "name": "红方塔4",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        340.1,
+        70.1
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938215+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_blue_4",
+      "name": "蓝方塔4",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        139.6,
+        277.3
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938216+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_red_5",
+      "name": "红方塔5",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        394.2,
+        94.7
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938217+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_blue_5",
+      "name": "蓝方塔5",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        36.0,
+        292.3
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938219+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_red_6",
+      "name": "红方塔6",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        288.1,
+        113.0
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938220+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_blue_6",
+      "name": "蓝方塔6",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        89.6,
+        319.8
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938222+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_red_7",
+      "name": "红方塔7",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        259.8,
+        161.7
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938223+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_blue_7",
+      "name": "蓝方塔7",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        309.3,
+        365.5
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938225+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_red_8",
+      "name": "红方塔8",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        398.3,
+        168.3
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938227+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_blue_8",
+      "name": "蓝方塔8",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        116.7,
+        370.5
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938228+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_red_9",
+      "name": "红方塔9",
+      "kind": "tower",
+      "side": "red",
+      "position": [
+        394.2,
+        287.3
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938229+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tower_blue_9",
+      "name": "蓝方塔9",
+      "kind": "tower",
+      "side": "blue",
+      "position": [
+        202.8,
+        370.5
+      ],
+      "initial_spawn_s": null,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "static",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "防御塔常驻",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938231+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "blue_buff_red_side",
+      "name": "红方蓝Buff",
+      "kind": "buff",
+      "side": "red",
+      "position": [
+        202.8,
+        80.1
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 90.0,
+      "buff_duration_s": 70.0,
+      "notes": "坐标来自人工小地图标注",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "红蓝Buff：首次30s，击杀后90s刷新，增益70s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938234+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "red_buff",
+      "name": "蓝方红Buff",
+      "kind": "buff",
+      "side": "blue",
+      "position": [
+        129.4,
+        183.5
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 90.0,
+      "buff_duration_s": 70.0,
+      "notes": "坐标来自人工小地图标注",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "红蓝Buff：首次30s，击杀后90s刷新，增益70s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938236+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "red_buff_red_side",
+      "name": "红方红Buff",
+      "kind": "buff",
+      "side": "red",
+      "position": [
+        303.5,
+        202.4
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 90.0,
+      "buff_duration_s": 70.0,
+      "notes": "坐标来自人工小地图标注",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "红蓝Buff：首次30s，击杀后90s刷新，增益70s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938237+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "blue_buff",
+      "name": "蓝方蓝Buff",
+      "kind": "buff",
+      "side": "blue",
+      "position": [
+        229.4,
+        303.1
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 90.0,
+      "buff_duration_s": 70.0,
+      "notes": "坐标来自人工小地图标注",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "红蓝Buff：首次30s，击杀后90s刷新，增益70s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938239+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "overlord",
+      "name": "主宰",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": [
+        150.4,
+        112.6
+      ],
+      "initial_spawn_s": 120.0,
+      "respawn_s": 240.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "暴君/主宰：开局2分钟，间隔4分钟（S23表；不同赛季有3/5分钟口径，待复核）",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938241+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "tyrant",
+      "name": "暴君",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": [
+        284.3,
+        276.9
+      ],
+      "initial_spawn_s": 120.0,
+      "respawn_s": 240.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "暴君/主宰：开局2分钟，间隔4分钟（S23表；不同赛季有3/5分钟口径，待复核）",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938242+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "space_spirit",
+      "name": "空间之灵",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": [
+        42.0,
+        21.2
+      ],
+      "initial_spawn_s": 60.0,
+      "respawn_s": 60.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "timed_window",
+      "possible_locations": null,
+      "active_until_s": 240.0,
+      "timing_notes": "空间之灵：首刷60s，前4分钟击杀后60s刷新；4分钟后停止",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938244+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "red_falcon",
+      "name": "红隼",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": [
+        398.1,
+        374.5
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": null,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "once",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "红隼：30s首刷，全局仅一次",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938246+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_blue_1",
+      "name": "blue小型资源1",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        89.6,
+        118.8
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938248+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_blue_2",
+      "name": "blue小型资源2",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        78.8,
+        178.1
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938249+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_blue_3",
+      "name": "blue小型资源3",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        99.4,
+        228.6
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938251+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_blue_4",
+      "name": "blue小型资源4",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        203.2,
+        257.8
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938252+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_blue_5",
+      "name": "blue小型资源5",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        165.8,
+        303.1
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938254+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_blue_6",
+      "name": "blue小型资源6",
+      "kind": "camp",
+      "side": "blue",
+      "position": [
+        278.9,
+        333.1
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938255+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_red_1",
+      "name": "red小型资源1",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        150.4,
+        55.5
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938257+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_red_2",
+      "name": "red小型资源2",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        268.3,
+        75.7
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938258+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_red_3",
+      "name": "red小型资源3",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        226.1,
+        123.8
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938259+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_red_4",
+      "name": "red小型资源4",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        333.4,
+        155.0
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938261+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_red_5",
+      "name": "red小型资源5",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        357.6,
+        202.0
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938262+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "small_red_6",
+      "name": "red小型资源6",
+      "kind": "camp",
+      "side": "red",
+      "position": [
+        340.1,
+        267.8
+      ],
+      "initial_spawn_s": 30.0,
+      "respawn_s": 80.0,
+      "buff_duration_s": null,
+      "notes": "坐标来自人工小地图标注；游戏单位换算待标定",
+      "source": {
+        "url": "file:///Users/boqing/Downloads/hok-decision-ai/data/S45/raw/map_images/minimap_s45_manual_416x424.png",
+        "name": "用户人工标注小地图(416x424)",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": true
+      },
+      "verified": true,
+      "spawn_rule": "fixed",
+      "possible_locations": null,
+      "active_until_s": null,
+      "timing_notes": "普通野怪：首次30s，间隔80s",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938264+00:00",
+        "is_primary": false
+      }
+    },
+    {
+      "id": "storm_dragon",
+      "name": "风暴龙王",
+      "kind": "neutral",
+      "side": "neutral",
+      "position": null,
+      "initial_spawn_s": 1200.0,
+      "respawn_s": 240.0,
+      "buff_duration_s": null,
+      "notes": "未在本次人工小地图标注中识别；位置待补",
+      "source": {
+        "url": "https://news.17173.com/z/pvp/content/07302025/102109377.shtml",
+        "name": "17173地图机制文章",
+        "retrieved_at": "2026-08-28T11:40:21.061788+00:00",
+        "is_primary": false
+      },
+      "verified": false,
+      "spawn_rule": "dynamic",
+      "possible_locations": [
+        [
+          150.4,
+          112.6
+        ],
+        [
+          284.3,
+          276.9
+        ]
+      ],
+      "active_until_s": null,
+      "timing_notes": "风暴龙王：20分钟后在双龙坑随机刷新；实际位置需实时从小地图观测回填",
+      "timing_source": {
+        "url": "https://www.9game.cn/wzry/8443363.html",
+        "name": "王者荣耀野怪刷新时间表（S23，含远古生物/野区，需随版本复核）",
+        "retrieved_at": "2026-08-28T11:58:10.938271+00:00",
+        "is_primary": false
+      }
+    }
+  ],
+  "mechanics": {
+    "minion_rules": {
+      "before_4min": {
+        "发育路": "兵线经济收益更高",
+        "对抗路": "兵线经验收益更高",
+        "中路": "多一个小兵，经济经验均衡"
+      },
+      "after_4min": "三路统一：1 弩车兵 + 2 普通小兵"
+    },
+    "tower_rules": {
+      "detail": "防御塔机制见原文，数值待校准"
+    },
+    "dragon_bond_s": 90.0,
+    "notes": [
+      "红隼：30s 刷新，全局仅一次，发育路墙外区域",
+      "空间之灵：60s 首刷，前 4 分钟被击杀后 60s 再刷；首次击杀激活传送法阵至 10 分钟",
+      "红蓝 Buff：增益持续 70s（刷新间隔待校准）",
+      "暴君/主宰/风暴龙王：90s 内同方连续击杀同类型龙触发羁绊负面效果"
+    ],
+    "source": {
+      "url": "https://news.17173.com/z/pvp/content/07302025/102109377.shtml",
+      "name": "17173 王者地图资源信息详解",
+      "retrieved_at": "2026-08-28T05:28:49.846317+00:00",
+      "is_primary": false
+    }
+  },
+  "fetched_at": "2026-08-28T11:59:42.509031+00:00",
+  "coordinate_frame_note": "当前各点 position 为小地图人工标注像素坐标（416x424，左上原点），游戏单位换算待标定",
+  "resource_timing_note": "刷新时间来自公开攻略（9game S23 表/远古生物/野区介绍），非官方确认，已按资源点记录 timing_source；后续需按当前赛季公告复核。"
+}

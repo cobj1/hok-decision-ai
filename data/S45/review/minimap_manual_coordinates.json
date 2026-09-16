@@ -1,0 +1,573 @@
+{
+  "version": "S45",
+  "status": "manual_coordinates_only",
+  "source": "data/S45/review/minimap_blank_scaled.png (user annotated squares)",
+  "coordinate_frame": "original_416x424",
+  "scaled_frame": "1000x1019",
+  "count": 40,
+  "manual_original_coordinates": [
+    {
+      "index": 1,
+      "position": [
+        309.3,
+        365.5
+      ]
+    },
+    {
+      "index": 2,
+      "position": [
+        203.2,
+        257.8
+      ]
+    },
+    {
+      "index": 3,
+      "position": [
+        129.4,
+        183.5
+      ]
+    },
+    {
+      "index": 4,
+      "position": [
+        284.3,
+        276.9
+      ]
+    },
+    {
+      "index": 5,
+      "position": [
+        259.8,
+        161.7
+      ]
+    },
+    {
+      "index": 6,
+      "position": [
+        139.6,
+        21.0
+      ]
+    },
+    {
+      "index": 7,
+      "position": [
+        202.8,
+        370.5
+      ]
+    },
+    {
+      "index": 8,
+      "position": [
+        226.1,
+        21.0
+      ]
+    },
+    {
+      "index": 9,
+      "position": [
+        89.6,
+        118.8
+      ]
+    },
+    {
+      "index": 10,
+      "position": [
+        173.3,
+        228.6
+      ]
+    },
+    {
+      "index": 11,
+      "position": [
+        317.6,
+        21.0
+      ]
+    },
+    {
+      "index": 12,
+      "position": [
+        398.1,
+        374.5
+      ]
+    },
+    {
+      "index": 13,
+      "position": [
+        394.2,
+        94.7
+      ]
+    },
+    {
+      "index": 14,
+      "position": [
+        116.7,
+        370.5
+      ]
+    },
+    {
+      "index": 15,
+      "position": [
+        202.8,
+        80.1
+      ]
+    },
+    {
+      "index": 16,
+      "position": [
+        226.1,
+        123.8
+      ]
+    },
+    {
+      "index": 17,
+      "position": [
+        165.8,
+        303.1
+      ]
+    },
+    {
+      "index": 18,
+      "position": [
+        278.9,
+        333.1
+      ]
+    },
+    {
+      "index": 19,
+      "position": [
+        36.0,
+        292.3
+      ]
+    },
+    {
+      "index": 20,
+      "position": [
+        139.6,
+        277.3
+      ]
+    },
+    {
+      "index": 21,
+      "position": [
+        229.4,
+        303.1
+      ]
+    },
+    {
+      "index": 22,
+      "position": [
+        99.4,
+        228.6
+      ]
+    },
+    {
+      "index": 23,
+      "position": [
+        150.4,
+        55.5
+      ]
+    },
+    {
+      "index": 24,
+      "position": [
+        394.2,
+        287.3
+      ]
+    },
+    {
+      "index": 25,
+      "position": [
+        78.8,
+        178.1
+      ]
+    },
+    {
+      "index": 26,
+      "position": [
+        57.6,
+        353.1
+      ]
+    },
+    {
+      "index": 27,
+      "position": [
+        268.3,
+        75.7
+      ]
+    },
+    {
+      "index": 28,
+      "position": [
+        374.4,
+        33.3
+      ]
+    },
+    {
+      "index": 29,
+      "position": [
+        340.1,
+        267.8
+      ]
+    },
+    {
+      "index": 30,
+      "position": [
+        357.6,
+        202.0
+      ]
+    },
+    {
+      "index": 31,
+      "position": [
+        398.3,
+        168.3
+      ]
+    },
+    {
+      "index": 32,
+      "position": [
+        42.0,
+        21.2
+      ]
+    },
+    {
+      "index": 33,
+      "position": [
+        303.5,
+        202.4
+      ]
+    },
+    {
+      "index": 34,
+      "position": [
+        288.1,
+        113.0
+      ]
+    },
+    {
+      "index": 35,
+      "position": [
+        333.4,
+        155.0
+      ]
+    },
+    {
+      "index": 36,
+      "position": [
+        150.4,
+        112.6
+      ]
+    },
+    {
+      "index": 37,
+      "position": [
+        89.6,
+        319.8
+      ]
+    },
+    {
+      "index": 38,
+      "position": [
+        30.6,
+        118.8
+      ]
+    },
+    {
+      "index": 39,
+      "position": [
+        340.1,
+        70.1
+      ]
+    },
+    {
+      "index": 40,
+      "position": [
+        36.0,
+        219.9
+      ]
+    }
+  ],
+  "manual_scaled_coordinates": [
+    {
+      "index": 1,
+      "position": [
+        743.5,
+        878.5
+      ]
+    },
+    {
+      "index": 2,
+      "position": [
+        488.5,
+        619.5
+      ]
+    },
+    {
+      "index": 3,
+      "position": [
+        311.0,
+        441.0
+      ]
+    },
+    {
+      "index": 4,
+      "position": [
+        683.5,
+        665.5
+      ]
+    },
+    {
+      "index": 5,
+      "position": [
+        624.5,
+        388.5
+      ]
+    },
+    {
+      "index": 6,
+      "position": [
+        335.5,
+        50.5
+      ]
+    },
+    {
+      "index": 7,
+      "position": [
+        487.5,
+        890.5
+      ]
+    },
+    {
+      "index": 8,
+      "position": [
+        543.5,
+        50.5
+      ]
+    },
+    {
+      "index": 9,
+      "position": [
+        215.5,
+        285.5
+      ]
+    },
+    {
+      "index": 10,
+      "position": [
+        416.5,
+        549.5
+      ]
+    },
+    {
+      "index": 11,
+      "position": [
+        763.5,
+        50.5
+      ]
+    },
+    {
+      "index": 12,
+      "position": [
+        957.0,
+        900.0
+      ]
+    },
+    {
+      "index": 13,
+      "position": [
+        947.5,
+        227.5
+      ]
+    },
+    {
+      "index": 14,
+      "position": [
+        280.5,
+        890.5
+      ]
+    },
+    {
+      "index": 15,
+      "position": [
+        487.5,
+        192.5
+      ]
+    },
+    {
+      "index": 16,
+      "position": [
+        543.5,
+        297.5
+      ]
+    },
+    {
+      "index": 17,
+      "position": [
+        398.5,
+        728.5
+      ]
+    },
+    {
+      "index": 18,
+      "position": [
+        670.5,
+        800.5
+      ]
+    },
+    {
+      "index": 19,
+      "position": [
+        86.5,
+        702.5
+      ]
+    },
+    {
+      "index": 20,
+      "position": [
+        335.5,
+        666.5
+      ]
+    },
+    {
+      "index": 21,
+      "position": [
+        551.5,
+        728.5
+      ]
+    },
+    {
+      "index": 22,
+      "position": [
+        239.0,
+        549.5
+      ]
+    },
+    {
+      "index": 23,
+      "position": [
+        361.5,
+        133.5
+      ]
+    },
+    {
+      "index": 24,
+      "position": [
+        947.5,
+        690.5
+      ]
+    },
+    {
+      "index": 25,
+      "position": [
+        189.5,
+        428.0
+      ]
+    },
+    {
+      "index": 26,
+      "position": [
+        138.5,
+        848.5
+      ]
+    },
+    {
+      "index": 27,
+      "position": [
+        645.0,
+        182.0
+      ]
+    },
+    {
+      "index": 28,
+      "position": [
+        900.0,
+        80.0
+      ]
+    },
+    {
+      "index": 29,
+      "position": [
+        817.5,
+        643.5
+      ]
+    },
+    {
+      "index": 30,
+      "position": [
+        859.5,
+        485.5
+      ]
+    },
+    {
+      "index": 31,
+      "position": [
+        957.5,
+        404.5
+      ]
+    },
+    {
+      "index": 32,
+      "position": [
+        101.0,
+        51.0
+      ]
+    },
+    {
+      "index": 33,
+      "position": [
+        729.5,
+        486.5
+      ]
+    },
+    {
+      "index": 34,
+      "position": [
+        692.5,
+        271.5
+      ]
+    },
+    {
+      "index": 35,
+      "position": [
+        801.5,
+        372.5
+      ]
+    },
+    {
+      "index": 36,
+      "position": [
+        361.5,
+        270.5
+      ]
+    },
+    {
+      "index": 37,
+      "position": [
+        215.5,
+        768.5
+      ]
+    },
+    {
+      "index": 38,
+      "position": [
+        73.5,
+        285.5
+      ]
+    },
+    {
+      "index": 39,
+      "position": [
+        817.5,
+        168.5
+      ]
+    },
+    {
+      "index": 40,
+      "position": [
+        86.5,
+        528.5
+      ]
+    }
+  ],
+  "note": "仅坐标，不含类型；类型待人工或后续分类确认"
+}

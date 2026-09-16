@@ -1,0 +1,770 @@
+{
+  "version": "S45",
+  "status": "manual_ground_truth_candidate",
+  "coordinate_frame": "original_416x424",
+  "scaled_frame": "1000x1019",
+  "source_image": "data/S45/review/minimap_blank_scaled.png (user annotated)",
+  "note": "人工方块坐标已换算；类型由与草稿的最优分配推断，待人工确认",
+  "pairs": [
+    {
+      "manual_index": 37,
+      "id": "B塔6",
+      "position": [
+        309.3,
+        365.5
+      ],
+      "scaled_position": [
+        743.5,
+        878.5
+      ],
+      "draft_position": [
+        198,
+        390
+      ],
+      "distance": 114.0,
+      "dx": 111.3,
+      "dy": -24.5
+    },
+    {
+      "manual_index": 26,
+      "id": "B塔8",
+      "position": [
+        203.2,
+        257.8
+      ],
+      "scaled_position": [
+        488.5,
+        619.5
+      ],
+      "draft_position": [
+        105,
+        310
+      ],
+      "distance": 111.2,
+      "dx": 98.2,
+      "dy": -52.2
+    },
+    {
+      "manual_index": 20,
+      "id": "B塔2",
+      "position": [
+        129.4,
+        183.5
+      ],
+      "scaled_position": [
+        311.0,
+        441.0
+      ],
+      "draft_position": [
+        36,
+        142
+      ],
+      "distance": 102.2,
+      "dx": 93.4,
+      "dy": 41.5
+    },
+    {
+      "manual_index": 28,
+      "id": "红资8",
+      "position": [
+        284.3,
+        276.9
+      ],
+      "scaled_position": [
+        683.5,
+        665.5
+      ],
+      "draft_position": [
+        352,
+        220
+      ],
+      "distance": 88.4,
+      "dx": -67.7,
+      "dy": 56.9
+    },
+    {
+      "manual_index": 17,
+      "id": "buff_3",
+      "position": [
+        259.8,
+        161.7
+      ],
+      "scaled_position": [
+        624.5,
+        388.5
+      ],
+      "draft_position": [
+        332,
+        120
+      ],
+      "distance": 83.4,
+      "dx": -72.2,
+      "dy": 41.7
+    },
+    {
+      "manual_index": 1,
+      "id": "蓝资1",
+      "position": [
+        139.6,
+        21.0
+      ],
+      "scaled_position": [
+        335.5,
+        50.5
+      ],
+      "draft_position": [
+        88,
+        83
+      ],
+      "distance": 80.6,
+      "dx": 51.6,
+      "dy": -62.0
+    },
+    {
+      "manual_index": 39,
+      "id": "B塔5",
+      "position": [
+        202.8,
+        370.5
+      ],
+      "scaled_position": [
+        487.5,
+        890.5
+      ],
+      "draft_position": [
+        135,
+        389
+      ],
+      "distance": 70.3,
+      "dx": 67.8,
+      "dy": -18.5
+    },
+    {
+      "manual_index": 2,
+      "id": "R塔2",
+      "position": [
+        226.1,
+        21.0
+      ],
+      "scaled_position": [
+        543.5,
+        50.5
+      ],
+      "draft_position": [
+        158,
+        26
+      ],
+      "distance": 68.3,
+      "dx": 68.1,
+      "dy": -5.0
+    },
+    {
+      "manual_index": 14,
+      "id": "B塔1",
+      "position": [
+        89.6,
+        118.8
+      ],
+      "scaled_position": [
+        215.5,
+        285.5
+      ],
+      "draft_position": [
+        36,
+        78
+      ],
+      "distance": 67.4,
+      "dx": 53.6,
+      "dy": 40.8
+    },
+    {
+      "manual_index": 25,
+      "id": "buff_1",
+      "position": [
+        173.3,
+        228.6
+      ],
+      "scaled_position": [
+        416.5,
+        549.5
+      ],
+      "draft_position": [
+        118,
+        262
+      ],
+      "distance": 64.6,
+      "dx": 55.3,
+      "dy": -33.4
+    },
+    {
+      "manual_index": 3,
+      "id": "R塔3",
+      "position": [
+        317.6,
+        21.0
+      ],
+      "scaled_position": [
+        763.5,
+        50.5
+      ],
+      "draft_position": [
+        262,
+        28
+      ],
+      "distance": 56.1,
+      "dx": 55.6,
+      "dy": -7.0
+    },
+    {
+      "manual_index": 40,
+      "id": "R塔6",
+      "position": [
+        398.1,
+        374.5
+      ],
+      "scaled_position": [
+        957.0,
+        900.0
+      ],
+      "draft_position": [
+        378,
+        325
+      ],
+      "distance": 53.4,
+      "dx": 20.1,
+      "dy": 49.5
+    },
+    {
+      "manual_index": 10,
+      "id": "R塔4",
+      "position": [
+        394.2,
+        94.7
+      ],
+      "scaled_position": [
+        947.5,
+        227.5
+      ],
+      "draft_position": [
+        386,
+        140
+      ],
+      "distance": 46.1,
+      "dx": 8.2,
+      "dy": -45.3
+    },
+    {
+      "manual_index": 38,
+      "id": "B塔4",
+      "position": [
+        116.7,
+        370.5
+      ],
+      "scaled_position": [
+        280.5,
+        890.5
+      ],
+      "draft_position": [
+        75,
+        383
+      ],
+      "distance": 43.5,
+      "dx": 41.7,
+      "dy": -12.5
+    },
+    {
+      "manual_index": 9,
+      "id": "红资2",
+      "position": [
+        202.8,
+        80.1
+      ],
+      "scaled_position": [
+        487.5,
+        192.5
+      ],
+      "draft_position": [
+        168,
+        55
+      ],
+      "distance": 42.9,
+      "dx": 34.8,
+      "dy": 25.1
+    },
+    {
+      "manual_index": 15,
+      "id": "红资3",
+      "position": [
+        226.1,
+        123.8
+      ],
+      "scaled_position": [
+        543.5,
+        297.5
+      ],
+      "draft_position": [
+        218,
+        82
+      ],
+      "distance": 42.6,
+      "dx": 8.1,
+      "dy": 41.8
+    },
+    {
+      "manual_index": 32,
+      "id": "蓝资6",
+      "position": [
+        165.8,
+        303.1
+      ],
+      "scaled_position": [
+        398.5,
+        728.5
+      ],
+      "draft_position": [
+        160,
+        342
+      ],
+      "distance": 39.3,
+      "dx": 5.8,
+      "dy": -38.9
+    },
+    {
+      "manual_index": 35,
+      "id": "蓝资8",
+      "position": [
+        278.9,
+        333.1
+      ],
+      "scaled_position": [
+        670.5,
+        800.5
+      ],
+      "draft_position": [
+        260,
+        300
+      ],
+      "distance": 38.1,
+      "dx": 18.9,
+      "dy": 33.1
+    },
+    {
+      "manual_index": 31,
+      "id": "B塔9",
+      "position": [
+        36.0,
+        292.3
+      ],
+      "scaled_position": [
+        86.5,
+        702.5
+      ],
+      "draft_position": [
+        35,
+        330
+      ],
+      "distance": 37.7,
+      "dx": 1.0,
+      "dy": -37.7
+    },
+    {
+      "manual_index": 29,
+      "id": "蓝资5",
+      "position": [
+        139.6,
+        277.3
+      ],
+      "scaled_position": [
+        335.5,
+        666.5
+      ],
+      "draft_position": [
+        112,
+        300
+      ],
+      "distance": 35.7,
+      "dx": 27.6,
+      "dy": -22.7
+    },
+    {
+      "manual_index": 33,
+      "id": "蓝资7",
+      "position": [
+        229.4,
+        303.1
+      ],
+      "scaled_position": [
+        551.5,
+        728.5
+      ],
+      "draft_position": [
+        210,
+        332
+      ],
+      "distance": 34.8,
+      "dx": 19.4,
+      "dy": -28.9
+    },
+    {
+      "manual_index": 24,
+      "id": "蓝资4",
+      "position": [
+        99.4,
+        228.6
+      ],
+      "scaled_position": [
+        239.0,
+        549.5
+      ],
+      "draft_position": [
+        70,
+        222
+      ],
+      "distance": 30.2,
+      "dx": 29.4,
+      "dy": 6.6
+    },
+    {
+      "manual_index": 6,
+      "id": "红资1",
+      "position": [
+        150.4,
+        55.5
+      ],
+      "scaled_position": [
+        361.5,
+        133.5
+      ],
+      "draft_position": [
+        122,
+        60
+      ],
+      "distance": 28.7,
+      "dx": 28.4,
+      "dy": -4.5
+    },
+    {
+      "manual_index": 30,
+      "id": "R塔5",
+      "position": [
+        394.2,
+        287.3
+      ],
+      "scaled_position": [
+        947.5,
+        690.5
+      ],
+      "draft_position": [
+        382,
+        265
+      ],
+      "distance": 25.4,
+      "dx": 12.2,
+      "dy": 22.3
+    },
+    {
+      "manual_index": 19,
+      "id": "蓝资3",
+      "position": [
+        78.8,
+        178.1
+      ],
+      "scaled_position": [
+        189.5,
+        428.0
+      ],
+      "draft_position": [
+        55,
+        170
+      ],
+      "distance": 25.2,
+      "dx": 23.8,
+      "dy": 8.1
+    },
+    {
+      "manual_index": 36,
+      "id": "B塔7",
+      "position": [
+        57.6,
+        353.1
+      ],
+      "scaled_position": [
+        138.5,
+        848.5
+      ],
+      "draft_position": [
+        52,
+        330
+      ],
+      "distance": 23.7,
+      "dx": 5.6,
+      "dy": 23.1
+    },
+    {
+      "manual_index": 8,
+      "id": "红资4",
+      "position": [
+        268.3,
+        75.7
+      ],
+      "scaled_position": [
+        645.0,
+        182.0
+      ],
+      "draft_position": [
+        258,
+        96
+      ],
+      "distance": 22.7,
+      "dx": 10.3,
+      "dy": -20.3
+    },
+    {
+      "manual_index": 5,
+      "id": "R塔9",
+      "position": [
+        374.4,
+        33.3
+      ],
+      "scaled_position": [
+        900.0,
+        80.0
+      ],
+      "draft_position": [
+        395,
+        25
+      ],
+      "distance": 22.2,
+      "dx": -20.6,
+      "dy": 8.3
+    },
+    {
+      "manual_index": 27,
+      "id": "buff_4",
+      "position": [
+        340.1,
+        267.8
+      ],
+      "scaled_position": [
+        817.5,
+        643.5
+      ],
+      "draft_position": [
+        360,
+        258
+      ],
+      "distance": 22.2,
+      "dx": -19.9,
+      "dy": 9.8
+    },
+    {
+      "manual_index": 21,
+      "id": "R塔8",
+      "position": [
+        357.6,
+        202.0
+      ],
+      "scaled_position": [
+        859.5,
+        485.5
+      ],
+      "draft_position": [
+        360,
+        180
+      ],
+      "distance": 22.1,
+      "dx": -2.4,
+      "dy": 22.0
+    },
+    {
+      "manual_index": 18,
+      "id": "红资7",
+      "position": [
+        398.3,
+        168.3
+      ],
+      "scaled_position": [
+        957.5,
+        404.5
+      ],
+      "draft_position": [
+        383,
+        183
+      ],
+      "distance": 21.2,
+      "dx": 15.3,
+      "dy": -14.7
+    },
+    {
+      "manual_index": 4,
+      "id": "R塔1",
+      "position": [
+        42.0,
+        21.2
+      ],
+      "scaled_position": [
+        101.0,
+        51.0
+      ],
+      "draft_position": [
+        62,
+        24
+      ],
+      "distance": 20.2,
+      "dx": -20.0,
+      "dy": -2.8
+    },
+    {
+      "manual_index": 22,
+      "id": "tyrant",
+      "position": [
+        303.5,
+        202.4
+      ],
+      "scaled_position": [
+        729.5,
+        486.5
+      ],
+      "draft_position": [
+        285,
+        205
+      ],
+      "distance": 18.6,
+      "dx": 18.5,
+      "dy": -2.6
+    },
+    {
+      "manual_index": 12,
+      "id": "红资5",
+      "position": [
+        288.1,
+        113.0
+      ],
+      "scaled_position": [
+        692.5,
+        271.5
+      ],
+      "draft_position": [
+        303,
+        122
+      ],
+      "distance": 17.4,
+      "dx": -14.9,
+      "dy": -9.0
+    },
+    {
+      "manual_index": 16,
+      "id": "红资6",
+      "position": [
+        333.4,
+        155.0
+      ],
+      "scaled_position": [
+        801.5,
+        372.5
+      ],
+      "draft_position": [
+        348,
+        148
+      ],
+      "distance": 16.2,
+      "dx": -14.6,
+      "dy": 7.0
+    },
+    {
+      "manual_index": 11,
+      "id": "overlord",
+      "position": [
+        150.4,
+        112.6
+      ],
+      "scaled_position": [
+        361.5,
+        270.5
+      ],
+      "draft_position": [
+        135,
+        115
+      ],
+      "distance": 15.6,
+      "dx": 15.4,
+      "dy": -2.4
+    },
+    {
+      "manual_index": 34,
+      "id": "buff_2",
+      "position": [
+        89.6,
+        319.8
+      ],
+      "scaled_position": [
+        215.5,
+        768.5
+      ],
+      "draft_position": [
+        75,
+        315
+      ],
+      "distance": 15.4,
+      "dx": 14.6,
+      "dy": 4.8
+    },
+    {
+      "manual_index": 13,
+      "id": "蓝资2",
+      "position": [
+        30.6,
+        118.8
+      ],
+      "scaled_position": [
+        73.5,
+        285.5
+      ],
+      "draft_position": [
+        45,
+        120
+      ],
+      "distance": 14.5,
+      "dx": -14.4,
+      "dy": -1.2
+    },
+    {
+      "manual_index": 7,
+      "id": "R塔7",
+      "position": [
+        340.1,
+        70.1
+      ],
+      "scaled_position": [
+        817.5,
+        168.5
+      ],
+      "draft_position": [
+        350,
+        60
+      ],
+      "distance": 14.2,
+      "dx": -9.9,
+      "dy": 10.1
+    },
+    {
+      "manual_index": 23,
+      "id": "B塔3",
+      "position": [
+        36.0,
+        219.9
+      ],
+      "scaled_position": [
+        86.5,
+        528.5
+      ],
+      "draft_position": [
+        36,
+        208
+      ],
+      "distance": 11.9,
+      "dx": -0.0,
+      "dy": 11.9
+    }
+  ]
+}
