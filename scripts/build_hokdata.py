@@ -53,6 +53,36 @@ def _base_key(key: str) -> str:
     return str(key).split("#", 1)[0]
 
 
+def _stratified_base_splits(strata: dict[str, list[str]]) -> dict[str, str]:
+    """按层（winner_side × author_camp）分配基础局，保证每层 70/15/15。
+
+    同一基础局的所有 #2 视角必须落在同一 split；层内用 md5 排序保证可复现。
+    """
+    result: dict[str, str] = {}
+    for key in sorted(strata):
+        bases = sorted(strata[key], key=lambda base: hashlib.md5(base.encode("utf-8")).hexdigest())
+        n = len(bases)
+        if n >= 3:
+            n_val = max(1, int(round(n * 0.15)))
+            n_test = max(1, int(round(n * 0.15)))
+        else:
+            n_val = n_test = 0
+        n_train = max(1, n - n_val - n_test)
+        while n_train + n_val + n_test > n:
+            if n_test > 0:
+                n_test -= 1
+            else:
+                n_val -= 1
+        for index, base in enumerate(bases):
+            if index < n_train:
+                result[base] = "train"
+            elif index < n_train + n_val:
+                result[base] = "val"
+            else:
+                result[base] = "test"
+    return result
+
+
 def _build_tencent(root: Path) -> dict:
     src = MERGED / "tencent_rt_frames.jsonl"
     dataset_dir = root / "dataset"
@@ -83,18 +113,32 @@ def _build_tencent(root: Path) -> dict:
                     "winner_side": winner,
                     "author_camp": frame["author_camp"],
                     "frames": 0,
-                    "split": _split_of(base),
+                    "split": None,
                 },
             )
             entry["frames"] += 1
 
-    base_splits: dict[str, str] = {}
+    base_info: dict[str, dict] = {}
     for entry in games.values():
-        base = entry["base_game"]
-        split = entry["split"]
-        if base in base_splits and base_splits[base] != split:
-            raise SystemExit(f"split leakage: base game {base} -> {base_splits[base]} / {split}")
-        base_splits[base] = split
+        info = base_info.setdefault(
+            entry["base_game"],
+            {"winner_side": entry["winner_side"], "camps": set()},
+        )
+        info["camps"].add(entry["author_camp"])
+    strata: dict[str, list[str]] = {}
+    for base, info in base_info.items():
+        camp_key = "mixed" if len(info["camps"]) > 1 else next(iter(info["camps"]))
+        strata.setdefault(f"{info['winner_side']}|{camp_key}", []).append(base)
+    base_splits = _stratified_base_splits(strata)
+    for entry in games.values():
+        entry["split"] = base_splits[entry["base_game"]]
+
+    for base, split in base_splits.items():
+        if base not in base_info:
+            raise SystemExit(f"split leakage: unknown base {base}")
+        assigned = {entry["split"] for entry in games.values() if entry["base_game"] == base}
+        if assigned != {split}:
+            raise SystemExit(f"split leakage: base game {base} -> {assigned}")
 
     for bv, entry in games.items():
         meta = {
@@ -116,6 +160,7 @@ def _build_tencent(root: Path) -> dict:
                 "base_games": len(base_splits),
                 "frame_counts": dict(Counter(entry["split"] for entry in games.values())),
                 "base_game_counts": dict(Counter(base_splits.values())),
+                "strata": {key: len(value) for key, value in sorted(strata.items())},
             },
             ensure_ascii=False,
             indent=2,
@@ -197,9 +242,9 @@ def main() -> int:
         "root": str(root),
         "datasets": {"tencent_rt": tencent, "wzry_behavior": behavior},
         "split_policy": {
-            "method": "md5(base_key) thresholds train<0.70 / val<0.85",
+            "method": "stratified group split by winner_side × author_camp; 70/15/15 per stratum",
             "group_key": "tencent source_game_id 或 video_bv 去掉 # 后缀；wzry 按 session",
-            "note": "实际比例见 datasets.*.splits / base_splits",
+            "note": "同局 #2 视角强制同 split；实际比例见 datasets.*.splits / base_splits",
         },
         "capabilities": {
             "winner_label": "tencent_rt 100%",
