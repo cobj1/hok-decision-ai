@@ -50,3 +50,51 @@ class LinearValue:
             "weights": self.weights,
             "bias": self.bias,
         }
+
+
+def context_from_state(state) -> list[float]:
+    """SearchState -> 13 维 context（与训练口径一致；缺失字段用保守默认值）。"""
+    blues = [hero for hero in state.heroes.values() if hero.side == "blue"]
+    reds = [hero for hero in state.heroes.values() if hero.side == "red"]
+    own_hp = (
+        sum(hero.hp / hero.max_hp for hero in blues if hero.max_hp > 0) / len(blues)
+        if blues else 0.7
+    )
+    red_loss = sum(
+        1.0 - hp for tower_id, hp in state.tower_hp.items() if tower_id.startswith("tower_red")
+    )
+    blue_loss = sum(
+        1.0 - hp for tower_id, hp in state.tower_hp.items() if tower_id.startswith("tower_blue")
+    )
+    time_norm = min(1.0, state.game_time / 1500.0)
+    return [
+        time_norm,
+        time_norm,                    # econ_sat（与训练数据同口径）
+        0.5,                          # enemy_threat
+        own_hp,
+        (red_loss - blue_loss) / 9.0,  # tower_adv
+        1.0 if state.game_time >= 120.0 else 0.0,
+        0.8,                          # team_aa_power
+        0.8,                          # team_caster_power
+        0.8,                          # build_attack_power
+        0.8,                          # build_defense_power
+        0.8,                          # build_utility_power
+        0.8,                          # skill_power
+        3.0 / 7.0,                    # match_level
+    ]
+
+
+class LinearValueEvaluator:
+    """供 beam_search 使用的 value_context 适配器。"""
+
+    def __init__(self, model: LinearValue) -> None:
+        self.model = model
+
+    @classmethod
+    def load(cls, path: str | Path) -> "LinearValueEvaluator":
+        return cls(LinearValue.load(path))
+
+    def evaluate(self, state, action=None) -> float:
+        from hok_decision.search.attention_weights import value_features_from_state
+
+        return self.model.score(context_from_state(state), value_features_from_state(state))
