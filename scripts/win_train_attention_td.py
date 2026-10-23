@@ -15,6 +15,7 @@ r"""严格 TD 训练注意力二阶权重（Win torch，模型只留 Win）。
 from __future__ import annotations
 
 import json
+import os
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -31,7 +32,9 @@ from hok_decision.model.attention_value import (  # noqa: E402
     AttentionValueModel,
 )
 
-DATASET = Path(r"E:\hokdata\dataset")
+HOKDATA_ROOT = Path(os.environ.get("HOKDATA_ROOT", str(Path(__file__).resolve().parents[1].parent / "hokdata")))
+DATASET = HOKDATA_ROOT / "dataset"
+SEGMENT_GAP_S = float(os.environ.get("BENEFIT_SEGMENT_GAP_S", "8.0"))
 INTERVALS = (5, 10, 15, 20, 30, 60, 120, 180, 300)
 LEVEL_MAP = {"1500+": 2, "1800+": 3, "2100+": 4, "2300+": 5, "2500+": 6, "赛事": 7}
 GAMMA = 0.99
@@ -69,7 +72,7 @@ def _context_features(frame: dict) -> tuple[list[float], list[float]]:
     kills_self = raw["kills_self"]
     kills_enemy = raw["kills_enemy"]
 
-    time_norm = float(frame.get("game_time_s", 0)) / 1500.0
+    time_norm = float(frame.get("game_time_s") or 0.0) / 1500.0
     level_id = LEVEL_MAP.get(str(frame.get("level_id", "")), 3)
     ally_hp = _mean(frame.get("ally_hp") or [])
     enemy_hp = _mean(frame.get("enemy_hp") or [])
@@ -80,7 +83,7 @@ def _context_features(frame: dict) -> tuple[list[float], list[float]]:
     context[CONTEXT_FEATURES.index("enemy_threat")] = 0.5
     context[CONTEXT_FEATURES.index("own_hp_frac")] = ally_hp if ally_hp else 0.7
     context[CONTEXT_FEATURES.index("tower_adv")] = raw["towers"] / 10.0
-    context[CONTEXT_FEATURES.index("dragon_avail")] = 1.0 if raw["dragons"] > 0 or float(frame.get("game_time_s", 0)) >= 120.0 else 0.0
+    context[CONTEXT_FEATURES.index("dragon_avail")] = 1.0 if raw["dragons"] > 0 or float(frame.get("game_time_s") or 0.0) >= 120.0 else 0.0
     context[CONTEXT_FEATURES.index("team_aa_power")] = 0.8
     context[CONTEXT_FEATURES.index("team_caster_power")] = 0.8
     context[CONTEXT_FEATURES.index("build_attack_power")] = 0.8
@@ -159,13 +162,13 @@ def _reward_between(a: dict, b: dict) -> float:
 
 def _segments(frames: list[dict]) -> list[list[dict]]:
     """按时间连续性切分：间隔>8s、时间倒退或 scene_break 视为新片段。"""
-    frames = sorted(frames, key=lambda f: float(f.get("game_time_s", 0)))
+    frames = sorted(frames, key=lambda f: float(f.get("game_time_s") or 0.0))
     segments: list[list[dict]] = []
     current: list[dict] = []
     prev_t: float | None = None
     for frame in frames:
-        t = float(frame.get("game_time_s", 0))
-        if current and (prev_t is None or t < prev_t or t - prev_t > 8.0):
+        t = float(frame.get("game_time_s") or 0.0)
+        if current and (prev_t is None or t < prev_t or t - prev_t > SEGMENT_GAP_S):
             segments.append(current)
             current = []
         if frame.get("frame_quality") == "scene_break" and current:
@@ -198,6 +201,7 @@ def _build_data() -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tenso
     rewards: list[float] = []
     discounts: list[float] = []
     interval_ids: list[int] = []
+    bvs: list[str] = []
     for frames in frames_by_video.values():
         for segment in _segments(frames):
             by_time = {round(float(f.get("game_time_s", 0)), 1): f for f in segment}
@@ -220,6 +224,7 @@ def _build_data() -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tenso
                     rewards.append(r)
                     discounts.append(GAMMA ** delta)
                     interval_ids.append(di)
+                    bvs.append(str(frame_t.get("video_bv")))
     return (
         torch.tensor(contexts, dtype=torch.float32),
         torch.tensor(features, dtype=torch.float32),
@@ -228,18 +233,42 @@ def _build_data() -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tenso
         torch.tensor(rewards, dtype=torch.float32),
         torch.tensor(discounts, dtype=torch.float32),
         interval_ids,
+        bvs,
     )
 
 
 def main() -> int:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"torch={torch.__version__} device={device}")
-    c, f, cn, fn, r, disc, interval_ids = _build_data()
+    c, f, cn, fn, r, disc, interval_ids, bvs = _build_data()
     print(f"samples={c.shape[0]} reward_mean={r.mean().item():.4f}")
     print("interval samples:", {INTERVALS[k]: v for k, v in sorted(Counter(interval_ids).items())})
 
+    split_path = HOKDATA_ROOT / "splits.json"
+    game_splits: dict[str, str] = {}
+    if split_path.exists():
+        game_splits = json.loads(split_path.read_text(encoding="utf-8")).get("tencent_rt", {})
+    if game_splits:
+        train_idx = [i for i, bv in enumerate(bvs) if game_splits.get(bv) == "train"]
+        val_idx = [i for i, bv in enumerate(bvs) if game_splits.get(bv) == "val"]
+    else:
+        game_ids = sorted(set(bvs))
+        n_train = max(1, int(len(game_ids) * 0.8))
+        train_games = set(game_ids[:n_train])
+        train_idx = [i for i, bv in enumerate(bvs) if bv in train_games]
+        val_idx = [i for i, bv in enumerate(bvs) if bv not in train_games]
+    if not train_idx or not val_idx:
+        raise SystemExit(f"split failed: train={len(train_idx)} val={len(val_idx)}")
+    print(
+        f"game split: train_games={len(set(bvs[i] for i in train_idx))} "
+        f"val_games={len(set(bvs[i] for i in val_idx))} "
+        f"train_samples={len(train_idx)} val_samples={len(val_idx)}"
+    )
+
     c, f, cn, fn, r, disc = c.to(device), f.to(device), cn.to(device), fn.to(device), r.to(device), disc.to(device)
     ids = torch.tensor(interval_ids, device=device)
+    tr = torch.tensor(train_idx, dtype=torch.long, device=device)
+    va = torch.tensor(val_idx, dtype=torch.long, device=device)
 
     model = AttentionValueModel(base_weights=[1.0] * 10).to(device)
     target_model = AttentionValueModel(base_weights=[1.0] * 10).to(device)
@@ -247,10 +276,6 @@ def main() -> int:
     target_model.eval()
     opt = torch.optim.Adam(model.parameters(), lr=0.005)
     loss_fn = nn.MSELoss()
-
-    perm = torch.randperm(c.shape[0], device=device)
-    n_train = int(c.shape[0] * 0.8)
-    tr, va = perm[:n_train], perm[n_train:]
 
     for step in range(4000):
         idx = tr[torch.randint(0, len(tr), (256,), device=device)]

@@ -13,6 +13,7 @@ r"""决策点 → 收益向量标签（self 视角，多 Δ）。
 from __future__ import annotations
 
 import json
+import os
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -22,10 +23,12 @@ import numpy as np
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-DATASET = Path(r"E:\hokdata\dataset")
-OUT_LABELS = Path(r"E:\hokdata\decision_benefit_labels.npz")
-OUT_META = Path(r"E:\hokdata\decision_benefit_labels.json")
-OUT_CLUSTERS = Path(r"E:\hokdata\action_benefit_clusters.json")
+HOKDATA_ROOT = Path(os.environ.get("HOKDATA_ROOT", str(Path(__file__).resolve().parents[1].parent / "hokdata")))
+DATASET = HOKDATA_ROOT / "dataset"
+OUT_LABELS = HOKDATA_ROOT / "decision_benefit_labels.npz"
+OUT_META = HOKDATA_ROOT / "decision_benefit_labels.json"
+OUT_CLUSTERS = HOKDATA_ROOT / "action_benefit_clusters.json"
+SEGMENT_GAP_S = float(os.environ.get("BENEFIT_SEGMENT_GAP_S", "8.0"))
 
 INTERVALS = (5, 10, 15, 20, 30, 60, 120, 180, 300)
 BENEFIT_NAMES = ["kill", "economy", "tower", "dragon", "survival", "advance"]
@@ -117,13 +120,13 @@ def _advance(frame: dict) -> float | None:
 
 
 def _segments(frames: list[dict]) -> list[list[dict]]:
-    frames = sorted(frames, key=lambda f: float(f.get("game_time_s", 0)))
+    frames = sorted(frames, key=lambda f: float(f.get("game_time_s") or 0.0))
     segs = []
     cur = []
     prev_t = None
     for fr in frames:
-        t = float(fr.get("game_time_s", 0))
-        if cur and (prev_t is None or t < prev_t or t - prev_t > 8.0):
+        t = float(fr.get("game_time_s") or 0.0)
+        if cur and (prev_t is None or t < prev_t or t - prev_t > SEGMENT_GAP_S):
             segs.append(cur)
             cur = []
         if fr.get("frame_quality") == "scene_break" and cur:
@@ -187,7 +190,7 @@ def main() -> int:
     points: list[dict] = []
     for frames in frames_by_video.values():
         for seg in _segments(frames):
-            by_time = {round(float(f.get("game_time_s", 0)), 1): f for f in seg}
+            by_time = {round(float(f.get("game_time_s") or 0.0), 1): f for f in seg}
             times = sorted(by_time.keys())
             for t in times:
                 a = by_time[t]
@@ -202,37 +205,63 @@ def main() -> int:
                 if row["benefits"]:
                     points.append(row)
 
-    labels20 = np.asarray([p["benefits"].get("20", [0.0] * len(BENEFIT_NAMES)) for p in points], dtype=np.float32)
-    mask20 = np.asarray([p["masks"].get("20", [0.0] * len(BENEFIT_NAMES)) for p in points], dtype=np.float32)
-    np.savez_compressed(OUT_LABELS, points_json=json.dumps(points), labels20=labels20, mask20=mask20)
+    if points:
+        primary = max(
+            {d for p in points for d in p["benefits"]},
+            key=lambda d: sum(1 for p in points if d in p["benefits"]),
+        )
+    else:
+        primary = "20"
+    labels_primary = np.asarray(
+        [p["benefits"].get(primary, [0.0] * len(BENEFIT_NAMES)) for p in points], dtype=np.float32
+    )
+    mask_primary = np.asarray(
+        [p["masks"].get(primary, [0.0] * len(BENEFIT_NAMES)) for p in points], dtype=np.float32
+    )
+    if primary == "20":
+        labels20, mask20 = labels_primary, mask_primary
+    else:
+        labels20 = np.zeros_like(labels_primary)
+        mask20 = np.zeros_like(mask_primary)
+    np.savez_compressed(
+        OUT_LABELS,
+        points_json=json.dumps(points),
+        labels_primary=labels_primary,
+        mask_primary=mask_primary,
+        primary_delta=np.int64(int(primary)),
+        labels20=labels20,
+        mask20=mask20,
+    )
     OUT_META.write_text(
         json.dumps(
             {
                 "benefit_names": BENEFIT_NAMES,
                 "intervals": INTERVALS,
                 "decision_points": len(points),
-                "note": "self视角收益向量；survival=己方血量均值变化；advance=己方推进-敌方推进",
+                "primary_delta": int(primary),
+                "primary_observed_dims": round(float(mask_primary.sum(axis=1).mean()), 3) if len(points) else 0.0,
+                "note": "self视角收益向量；survival=己方血量均值变化；advance=己方推进-敌方推进；30s采样数据的主Δ为30",
             },
             ensure_ascii=False,
             indent=2,
         ),
         encoding="utf-8",
     )
-    print(f"decision points: {len(points)}; labels20 shape {labels20.shape}")
+    print(f"decision points: {len(points)}; primary Δ={primary}s; labels shape {labels_primary.shape}")
 
-    # 对 Δ=20s 收益向量聚类（仅用完整观测样本；每维 1%/99% 截尾防 OCR 脏值）
-    full = mask20.sum(axis=1) == len(BENEFIT_NAMES)
-    x = labels20[full]
-    clipped = np.clip(
-        x,
-        np.percentile(x, 1, axis=0),
-        np.percentile(x, 99, axis=0),
-    )
-    z = (clipped - clipped.mean(axis=0, keepdims=True)) / (clipped.std(axis=0, keepdims=True) + 1e-8)
+    # 对主 Δ 收益向量聚类（至少 3 维有观测；每维 1%/99% 截尾防脏值）
+    full = mask_primary.sum(axis=1) >= 3
+    x = labels_primary[full]
     if len(x) >= K:
+        clipped = np.clip(
+            x,
+            np.percentile(x, 1, axis=0),
+            np.percentile(x, 99, axis=0),
+        )
+        z = (clipped - clipped.mean(axis=0, keepdims=True)) / (clipped.std(axis=0, keepdims=True) + 1e-8)
         labels, centers = kmeans(z, K)
         centers = centers * clipped.std(axis=0) + clipped.mean(axis=0)
-        report = {"k": K, "clusters": []}
+        report = {"k": K, "primary_delta": int(primary), "clusters": []}
         for j in range(K):
             cnt = int((labels == j).sum())
             report["clusters"].append(
@@ -244,6 +273,8 @@ def main() -> int:
             )
         OUT_CLUSTERS.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"saved clusters -> {OUT_CLUSTERS}")
+    else:
+        print(f"skip clusters: only {len(x)} samples with >=3 observed dims")
     print("BUILD_BENEFIT_LABELS_OK")
     return 0
 

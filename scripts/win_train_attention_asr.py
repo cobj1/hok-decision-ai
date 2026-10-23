@@ -16,6 +16,7 @@ r"""用解说(ASR)的『下一步动作』拟合注意力二阶权重（Win 运�
 from __future__ import annotations
 
 import json
+import os
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -40,9 +41,10 @@ from hok_decision.search.attention_weights import (  # noqa: E402
 from hok_decision.search.planner import SearchState, rollout_decision  # noqa: E402
 from hok_decision.simulator.units import Hero  # noqa: E402
 
-DATASET = Path(r"E:\hokdata\dataset")
-ASR_REPORT = Path(r"E:\hokdata\asr_calibration_final_v2.json")
-SPLIT_FILE = Path(r"E:\hokdata\asr_train_split.json")
+HOKDATA_ROOT = Path(os.environ.get("HOKDATA_ROOT", str(Path(__file__).resolve().parents[1].parent / "hokdata")))
+DATASET = HOKDATA_ROOT / "dataset"
+ASR_REPORT = HOKDATA_ROOT / "asr_calibration_final_v2.json"
+SPLIT_FILE = HOKDATA_ROOT / "asr_train_split.json"
 MODELS_DIR = PROJECT_ROOT / "data" / "S45" / "models"
 TD_MODEL = MODELS_DIR / "attention_value_td.pt"
 OUT_MODEL = MODELS_DIR / "attention_value_asr.pt"

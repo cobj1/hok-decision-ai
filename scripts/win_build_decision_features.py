@@ -12,6 +12,7 @@ L4 观测掩码：每个价值维度 observed 0/1 + roster_known
 from __future__ import annotations
 
 import json
+import os
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -21,10 +22,11 @@ import numpy as np
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-DATASET = Path(r"E:\hokdata\dataset")
+HOKDATA_ROOT = Path(os.environ.get("HOKDATA_ROOT", str(Path(__file__).resolve().parents[1].parent / "hokdata")))
+DATASET = HOKDATA_ROOT / "dataset"
 DATA = PROJECT_ROOT / "data" / "S45" / "normalized"
-OUT_NPZ = Path(r"E:\hokdata\decision_features.npz")
-OUT_META = Path(r"E:\hokdata\decision_features.json")
+OUT_NPZ = HOKDATA_ROOT / "decision_features.npz"
+OUT_META = HOKDATA_ROOT / "decision_features.json"
 
 HUD_AFFINE = ((3.9619274696916493, 1.3453769972204605e-05), (-1.9928688568260355e-05, 4.038131527190943), (-196.00459141224727, -105.2570867363273))
 BLUE_BASE = (25.0, 395.0)
@@ -142,7 +144,7 @@ def _features_for_frame(
     heroes = frame.get("heroes", [])
     self_c = _centroid(heroes, "self", cs) or BLUE_BASE
     enemy_c = _centroid(heroes, "enemy", cs) or RED_BASE
-    t = float(frame.get("game_time_s", 0))
+    t = float(frame.get("game_time_s") or 0.0)
     camp_red = 1.0 if str(frame.get("author_camp", "")) == "red" else 0.0
 
     f: list[float] = []
@@ -238,10 +240,10 @@ def main() -> int:
     rows: list[list[float]] = []
     meta_rows: list[dict] = []
     for frames in frames_by_video.values():
-        frames.sort(key=lambda fr: float(fr.get("game_time_s", 0)))
+        frames.sort(key=lambda fr: float(fr.get("game_time_s") or 0.0))
         for i, frame in enumerate(frames):
-            t = float(frame.get("game_time_s", 0))
-            window = [fr for fr in frames[max(0, i - 12) : i] if t - float(fr.get("game_time_s", 0)) <= WINDOW_S]
+            t = float(frame.get("game_time_s") or 0.0)
+            window = [fr for fr in frames[max(0, i - 12) : i] if t - float(fr.get("game_time_s") or 0.0) <= WINDOW_S]
             vec = _features_for_frame(frame, window, resources, skill_power, attack_power)
             rows.append(vec)
             meta_rows.append({

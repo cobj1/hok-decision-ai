@@ -1,11 +1,13 @@
 import json
+import os
 import re
 from collections import Counter
 from pathlib import Path
 
+HOKDATA_ROOT = Path(os.environ.get("HOKDATA_ROOT", str(Path(__file__).resolve().parents[1].parent / "hokdata")))
 parts = sorted(
     p
-    for p in Path(r"E:\hokdata").glob("asr_vs_search_part_*.json")
+    for p in HOKDATA_ROOT.glob("asr_vs_search_part_*.json")
     if re.fullmatch(r"asr_vs_search_part_\d+\.json", p.name)
 )
 rows = []
@@ -30,7 +32,7 @@ final = {
     "by_action": by_action,
     "meta": meta,
 }
-out = Path(r"E:\hokdata\asr_vs_search_final.json")
+out = HOKDATA_ROOT / "asr_vs_search_final.json"
 out.write_text(json.dumps(final, ensure_ascii=False, indent=2), encoding="utf-8")
 print("parts", len(parts), "rows", final["total"], "hits", final["hits"], "rate", final["hit_rate"])
 print(json.dumps(final["by_action"], ensure_ascii=False, indent=2))

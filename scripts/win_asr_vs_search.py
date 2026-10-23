@@ -18,6 +18,7 @@ r"""ASR 意图 vs search 输出校对（Win 运行）。
 from __future__ import annotations
 
 import json
+import os
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -32,9 +33,10 @@ from hok_decision.search.attention_weights import AttentionWeightedValue  # noqa
 from hok_decision.search.planner import SearchState, beam_search  # noqa: E402
 from hok_decision.simulator.units import Hero  # noqa: E402
 
-DATASET = Path(r"E:\hokdata\dataset")
-ASR_REPORT = Path(r"E:\hokdata\asr_calibration_final_v2.json")
-SPLIT_FILE = Path(r"E:\hokdata\asr_train_split.json")
+HOKDATA_ROOT = Path(os.environ.get("HOKDATA_ROOT", str(Path(__file__).resolve().parents[1].parent / "hokdata")))
+DATASET = HOKDATA_ROOT / "dataset"
+ASR_REPORT = HOKDATA_ROOT / "asr_calibration_final_v2.json"
+SPLIT_FILE = HOKDATA_ROOT / "asr_train_split.json"
 MODELS_DIR = PROJECT_ROOT / "data" / "S45" / "models"
 MAP_JSON = PROJECT_ROOT / "data" / "S45" / "normalized" / "map.json"
 

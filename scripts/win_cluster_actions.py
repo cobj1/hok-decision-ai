@@ -9,15 +9,17 @@ K=16，标准化后 k-means；输出每簇质心与可解释统计，供人工�
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
 import numpy as np
 
-OUT_NPZ = Path(r"E:\hokdata\decision_features.npz")
-META_JSON = Path(r"E:\hokdata\decision_features.json")
-OUT_CLUSTERS = Path(r"E:\hokdata\action_clusters.json")
-OUT_ASSIGN = Path(r"E:\hokdata\action_cluster_assign.npz")
+HOKDATA_ROOT = Path(os.environ.get("HOKDATA_ROOT", str(Path(__file__).resolve().parents[1].parent / "hokdata")))
+OUT_NPZ = HOKDATA_ROOT / "decision_features.npz"
+META_JSON = HOKDATA_ROOT / "decision_features.json"
+OUT_CLUSTERS = HOKDATA_ROOT / "action_clusters.json"
+OUT_ASSIGN = HOKDATA_ROOT / "action_cluster_assign.npz"
 K = 16
 SEED = 20260905
 

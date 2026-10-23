@@ -11,6 +11,7 @@ r"""ASR 解说意图 vs 收益向量 校对 v2（Win 运行）。
 from __future__ import annotations
 
 import json
+import os
 import re
 import statistics
 import sys
@@ -20,13 +21,14 @@ from pathlib import Path
 
 import numpy as np
 
-DATASET = Path(r"E:\hokdata\dataset")
-TRANSCRIPTS = Path(r"E:\hokdata\transcripts")
+HOKDATA_ROOT = Path(os.environ.get("HOKDATA_ROOT", str(Path(__file__).resolve().parents[1].parent / "hokdata")))
+DATASET = HOKDATA_ROOT / "dataset"
+TRANSCRIPTS = HOKDATA_ROOT / "transcripts"
 POOL_TXT = TRANSCRIPTS / "pool"
-OUT = Path(r"E:\hokdata\asr_calibration_report_v2.json")
+OUT = HOKDATA_ROOT / "asr_calibration_report_v2.json"
 DEEPSEEK_URL = "https://api.deepseek.com/anthropic/v1/messages"
 DEEPSEEK_MODEL = "deepseek-v4-flash"
-DEEPSEEK_KEY_FILE = Path(r"E:\hokdata\deepseek_key.txt")
+DEEPSEEK_KEY_FILE = HOKDATA_ROOT / "deepseek_key.txt"
 
 
 def _deepseek_key() -> str:
