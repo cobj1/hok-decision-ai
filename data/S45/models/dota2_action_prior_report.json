@@ -1,0 +1,284 @@
+{
+ "data": "../hokdata/external/dota2_dumps/semantic_pilot.jsonl",
+ "rows": 724106,
+ "skipped": {
+  "null_field": 6304
+ },
+ "matches": {
+  "train": 38,
+  "val": 8,
+  "test": 9
+ },
+ "class_prior_train": {
+  "advance": 0.241,
+  "retreat": 0.1769,
+  "roam": 0.0964,
+  "hold": 0.2592,
+  "cast": 0.1437,
+  "recall": 0.0095,
+  "dead": 0.0732
+ },
+ "baselines": {
+  "majority_class": "hold",
+  "majority_acc": 0.3204,
+  "prior_argmax_acc": 0.3204
+ },
+ "val": {
+  "acc": 0.4328,
+  "macro_f1": 0.4336,
+  "per_class": [
+   {
+    "class": "advance",
+    "precision": 0.6202,
+    "recall": 0.234,
+    "f1": 0.3398,
+    "support": 24851
+   },
+   {
+    "class": "retreat",
+    "precision": 0.3082,
+    "recall": 0.2936,
+    "f1": 0.3007,
+    "support": 17574
+   },
+   {
+    "class": "roam",
+    "precision": 0.2059,
+    "recall": 0.1844,
+    "f1": 0.1945,
+    "support": 10189
+   },
+   {
+    "class": "hold",
+    "precision": 0.9248,
+    "recall": 0.6984,
+    "f1": 0.7958,
+    "support": 22974
+   },
+   {
+    "class": "cast",
+    "precision": 0.3239,
+    "recall": 0.4626,
+    "f1": 0.381,
+    "support": 15980
+   },
+   {
+    "class": "recall",
+    "precision": 0.0323,
+    "recall": 0.4812,
+    "f1": 0.0605,
+    "support": 1195
+   },
+   {
+    "class": "dead",
+    "precision": 1.0,
+    "recall": 0.9289,
+    "f1": 0.9631,
+    "support": 6607
+   }
+  ],
+  "confusion": [
+   [
+    5816,
+    4584,
+    2950,
+    218,
+    5344,
+    5939,
+    0
+   ],
+   [
+    719,
+    5159,
+    2310,
+    87,
+    5469,
+    3830,
+    0
+   ],
+   [
+    679,
+    2235,
+    1879,
+    73,
+    2657,
+    2666,
+    0
+   ],
+   [
+    1460,
+    1297,
+    1059,
+    16044,
+    1674,
+    1440,
+    0
+   ],
+   [
+    475,
+    3244,
+    814,
+    807,
+    7393,
+    3247,
+    0
+   ],
+   [
+    22,
+    167,
+    96,
+    62,
+    273,
+    575,
+    0
+   ],
+   [
+    207,
+    52,
+    20,
+    58,
+    18,
+    115,
+    6137
+   ]
+  ]
+ },
+ "test": {
+  "acc": 0.4855,
+  "macro_f1": 0.4377,
+  "per_class": [
+   {
+    "class": "advance",
+    "precision": 0.5809,
+    "recall": 0.2476,
+    "f1": 0.3472,
+    "support": 25634
+   },
+   {
+    "class": "retreat",
+    "precision": 0.3214,
+    "recall": 0.3067,
+    "f1": 0.3139,
+    "support": 17797
+   },
+   {
+    "class": "roam",
+    "precision": 0.193,
+    "recall": 0.1801,
+    "f1": 0.1863,
+    "support": 10123
+   },
+   {
+    "class": "hold",
+    "precision": 0.9277,
+    "recall": 0.7823,
+    "f1": 0.8488,
+    "support": 35640
+   },
+   {
+    "class": "cast",
+    "precision": 0.3035,
+    "recall": 0.4112,
+    "f1": 0.3492,
+    "support": 14580
+   },
+   {
+    "class": "recall",
+    "precision": 0.0307,
+    "recall": 0.5403,
+    "f1": 0.058,
+    "support": 1029
+   },
+   {
+    "class": "dead",
+    "precision": 1.0,
+    "recall": 0.9238,
+    "f1": 0.9604,
+    "support": 6427
+   }
+  ],
+  "confusion": [
+   [
+    6346,
+    4926,
+    2962,
+    419,
+    4726,
+    6255,
+    0
+   ],
+   [
+    899,
+    5458,
+    2494,
+    211,
+    4642,
+    4093,
+    0
+   ],
+   [
+    829,
+    2247,
+    1823,
+    85,
+    2437,
+    2702,
+    0
+   ],
+   [
+    2061,
+    1359,
+    934,
+    27882,
+    1718,
+    1686,
+    0
+   ],
+   [
+    491,
+    2868,
+    1105,
+    1424,
+    5995,
+    2697,
+    0
+   ],
+   [
+    90,
+    92,
+    90,
+    9,
+    192,
+    556,
+    0
+   ],
+   [
+    209,
+    32,
+    39,
+    24,
+    44,
+    142,
+    5937
+   ]
+  ]
+ },
+ "delta_vs_majority_pp": 16.51,
+ "features": [
+  "x_norm",
+  "y_norm",
+  "hp_ratio",
+  "mana_ratio",
+  "level",
+  "networth",
+  "gold_diff",
+  "kill_diff",
+  "n_enemy_unseen",
+  "alive",
+  "dist_own_base",
+  "dist_enemy_base",
+  "t_min"
+ ],
+ "epochs": 10,
+ "seed": 0
+}
