@@ -173,9 +173,10 @@ def main() -> int:
         prev_blue_center = blue_center
         prev_red_center = red_center
 
-    out = Path(args.out)
+    out = Path(args.out).resolve()
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text("\n".join(json.dumps(row, ensure_ascii=False) for row in out_rows) + "\n", encoding="utf-8")
+    summary_path = Path(args.summary).resolve()
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source": "KPL official VOD (human professional 5v5)",
@@ -198,15 +199,15 @@ def main() -> int:
             "camp 1/2 assumed blue/red (KPL API convention)",
         ],
     }
-    Path(args.summary).parent.mkdir(parents=True, exist_ok=True)
-    Path(args.summary).write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    summary_path.parent.mkdir(parents=True, exist_ok=True)
+    summary_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 
     manifest_path = HOKDATA / "manifest.json"
     if manifest_path.exists():
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         manifest.setdefault("human_demo", {})["kpl_vod_macro"] = {
             "file": str(out.relative_to(HOKDATA)).replace("\\", "/"),
-            "summary": str(Path(args.summary).relative_to(HOKDATA)).replace("\\", "/"),
+            "summary": str(summary_path.relative_to(HOKDATA)).replace("\\", "/"),
             "frames": len(out_rows),
             "source": "KPL VOD",
             "winner_side": winner_side,
@@ -216,7 +217,7 @@ def main() -> int:
         manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(f"frames={len(out_rows)} coverage={summary['coverage_pct']} -> {out}")
-    print(f"summary: {args.summary}")
+    print(f"summary: {summary_path}")
     return 0
 
 

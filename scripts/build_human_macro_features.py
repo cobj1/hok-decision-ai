@@ -95,7 +95,7 @@ def main() -> int:
         times.append(float(row["t"]))
 
     x_arr = np.asarray(x, dtype=np.float32)
-    out = Path(args.out)
+    out = Path(args.out).resolve()
     out.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(
         out,
@@ -108,6 +108,7 @@ def main() -> int:
         macros=np.asarray(MACROS),
         battle_ids=np.asarray([str(row.get("battle_id")) for row in rows]),
     )
+    meta_path = Path(args.meta).resolve()
     meta = {
         "input": str(args.input),
         "output": str(out),
@@ -122,7 +123,8 @@ def main() -> int:
         "split": "sample_only_1_game",
         "note": "人类宏观走位样例；不足以训练生产模型，多局 VOD 可按同一脚本追加",
     }
-    Path(args.meta).write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+    meta_path.parent.mkdir(parents=True, exist_ok=True)
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
 
     manifest_path = HOKDATA / "manifest.json"
     if manifest_path.exists():
@@ -130,7 +132,7 @@ def main() -> int:
         manifest.setdefault("human_demo", {}).setdefault("kpl_vod_macro", {}).update(
             {
                 "features": str(out.relative_to(HOKDATA)).replace("\\", "/"),
-                "features_meta": str(Path(args.meta).relative_to(HOKDATA)).replace("\\", "/"),
+                "features_meta": str(meta_path.relative_to(HOKDATA)).replace("\\", "/"),
                 "feature_rows": int(x_arr.shape[0]),
                 "macro_labels": MACROS,
             }
