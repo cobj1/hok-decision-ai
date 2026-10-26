@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-10-23T14:04:17.881493+00:00",
+  "hok_version": "S45",
+  "source": {
+    "file": "D:\\work\\aiKings\\hok-decision-ai\\data\\S45\\raw\\external\\tencent_rt_hok_sample_100.json",
+    "sha256": "9b4305e6759294e6de1480570ae5d83e9911ae01d1388d9db6afe4644dc54825",
+    "url": "https://github.com/yangzelong14/Real-Time-HoK-Dataset",
+    "note": "Tencent AI Lab 100-game sample; no explicit license, research use only"
+  },
+  "merged": {
+    "games": 100,
+    "frames": 3046,
+    "output": "D:\\work\\aiKings\\hok-decision-ai\\data\\S45\\training\\merged\\tencent_rt_frames.jsonl"
+  },
+  "dropped_reset_rows": 100,
+  "winner_side_balance": {
+    "blue": 48,
+    "red": 52
+  },
+  "author_camp_balance": {
+    "red": 49,
+    "blue": 51
+  },
+  "time_range_s": [
+    0.0,
+    1590.0
+  ],
+  "hero_identity": {
+    "unique": 90,
+    "not_in_s45_catalog": []
+  },
+  "field_coverage_pct": {
+    "hero_identity": 100.0,
+    "scoreboard_gold": 100.0,
+    "scoreboard_kills": 100.0,
+    "scoreboard_towers": 100.0,
+    "objectives": 100.0,
+    "game_time": 100.0,
+    "positions": 0.0,
+    "hp": 0.0,
+    "human_action": 0.0
+  },
+  "gaps": [
+    "无坐标：heroes/hero_slots 只有身份与经济，position=null",
+    "无血量/蓝量/等级：ally_hp/enemy_hp 为空",
+    "30 秒采样：只能做 Δ=30s 的收益标签，细粒度动作不可得",
+    "2019 旧版本：英雄/装备数值与 S45 不一致，仅适合宏观胜负/经济建模",
+    "towers/gold/dragons 均为作者视角差值（正=己方优势）；towers_remaining_* 保留原始剩余塔数",
+    "baron/darkTyrant 为增益状态位，dragons=0→1 跳变累计值，非官方龙计数",
+    "winner/author 阵营由 md5 平衡分配，不代表真实蓝红方"
+  ]
+}

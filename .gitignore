@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .claude/
+
+# 合并后的逐帧语料体积大（单文件 11–58MB），只入库清单与报告
+data/S45/training/merged/*.jsonl

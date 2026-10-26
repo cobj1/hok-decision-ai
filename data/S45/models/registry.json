@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-10-25T23:25:33",
+  "models_dir": "D:\\work\\aiKings\\hok-decision-ai\\data\\S45\\models",
+  "counts": {
+    "validated": 4
+  },
+  "models": [
+    {
+      "name": "attention_value_real",
+      "file": "attention_value_real.pt",
+      "bytes": 6193,
+      "sha256": "6d747b8c312db4528bf4f7d2941617b181821191da3d33adb61b3388edf9495e",
+      "report": "attention_value_real.json",
+      "metrics": {
+        "kind": "supervised",
+        "samples": 2880,
+        "primary": 0.6871681332588195,
+        "val_accuracy": 0.6871681332588195,
+        "baseline_accuracy": 0.61946901679039,
+        "mse": null,
+        "r2": null,
+        "seeds": 5
+      },
+      "status": "validated"
+    },
+    {
+      "name": "attention_value_td",
+      "file": "attention_value_td.pt",
+      "bytes": 6169,
+      "sha256": "c038275f119a4492d1dd339f072748c5754d649b8dd0c2aacc101790022490d1",
+      "report": "attention_value_td.json",
+      "metrics": {
+        "kind": "supervised",
+        "samples": 12930,
+        "primary": 0.1626601710502411,
+        "val_accuracy": null,
+        "baseline_accuracy": null,
+        "mse": 0.34802915768059556,
+        "r2": 0.1626601710502411,
+        "seeds": 0
+      },
+      "status": "validated"
+    },
+    {
+      "name": "dota2_action_prior",
+      "file": "dota2_action_prior.pt",
+      "bytes": 26009,
+      "sha256": "aa2db7f52998694a1a361dd166cc6a180c0abdb7d23fd828711767b0f1c1217b",
+      "report": "dota2_action_prior_report.json",
+      "metrics": {
+        "kind": "sequence",
+        "samples": 724106,
+        "primary": 0.4855,
+        "test_acc": 0.4855,
+        "test_macro_f1": 0.4377,
+        "baseline_accuracy": 0.3204,
+        "matches": {
+          "train": 38,
+          "val": 8,
+          "test": 9
+        }
+      },
+      "status": "validated"
+    },
+    {
+      "name": "dota2_prior_unw",
+      "file": "dota2_prior_unw.pt",
+      "bytes": 25973,
+      "sha256": "9015662c70bdc0d41bf0757fa33f0589c36a99951b51c8599dc13033cb715fc8",
+      "report": "dota2_prior_unw_report.json",
+      "metrics": {
+        "kind": "sequence",
+        "samples": 724106,
+        "primary": 0.5535,
+        "test_acc": 0.5535,
+        "test_macro_f1": 0.4265,
+        "baseline_accuracy": 0.3204,
+        "matches": {
+          "train": 38,
+          "val": 8,
+          "test": 9
+        }
+      },
+      "status": "validated"
+    }
+  ],
+  "orphan_reports": [],
+  "errors": []
+}

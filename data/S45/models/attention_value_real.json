@@ -1,0 +1,446 @@
+{
+  "context_features": [
+    "time_norm",
+    "econ_sat",
+    "enemy_threat",
+    "own_hp_frac",
+    "tower_adv",
+    "dragon_avail",
+    "team_aa_power",
+    "team_caster_power",
+    "build_attack_power",
+    "build_defense_power",
+    "build_utility_power",
+    "skill_power",
+    "match_level"
+  ],
+  "value_features": [
+    "hp_diff",
+    "economy_diff",
+    "small_camp_diff",
+    "red_buff_diff",
+    "blue_buff_diff",
+    "tyrant_diff",
+    "overlord_diff",
+    "storm_dragon_diff",
+    "tower_diff",
+    "kill_diff"
+  ],
+  "d_model": 32,
+  "metrics": {
+    "val_accuracy": 0.6871681332588195,
+    "majority_baseline": 0.61946901679039,
+    "samples": 2880,
+    "train_games": 66,
+    "val_games": 18,
+    "seeds": [
+      0.6858407258987427,
+      0.6902654767036438,
+      0.6814159154891968,
+      0.6902654767036438,
+      0.6880530714988708
+    ],
+    "levels": [
+      {
+        "bv": "game_id_1787",
+        "frames": 21
+      },
+      {
+        "bv": "game_id_1827",
+        "frames": 34
+      },
+      {
+        "bv": "game_id_1828",
+        "frames": 28
+      },
+      {
+        "bv": "game_id_1831",
+        "frames": 36
+      },
+      {
+        "bv": "game_id_1839",
+        "frames": 22
+      },
+      {
+        "bv": "game_id_1840",
+        "frames": 20
+      },
+      {
+        "bv": "game_id_1842",
+        "frames": 29
+      },
+      {
+        "bv": "game_id_1845",
+        "frames": 19
+      },
+      {
+        "bv": "game_id_1849",
+        "frames": 31
+      },
+      {
+        "bv": "game_id_1851",
+        "frames": 23
+      },
+      {
+        "bv": "game_id_1852",
+        "frames": 20
+      },
+      {
+        "bv": "game_id_1853",
+        "frames": 12
+      },
+      {
+        "bv": "game_id_1854",
+        "frames": 36
+      },
+      {
+        "bv": "game_id_1859",
+        "frames": 26
+      },
+      {
+        "bv": "game_id_18660",
+        "frames": 44
+      },
+      {
+        "bv": "game_id_1868",
+        "frames": 35
+      },
+      {
+        "bv": "game_id_1873",
+        "frames": 27
+      },
+      {
+        "bv": "game_id_1880",
+        "frames": 26
+      },
+      {
+        "bv": "game_id_1887",
+        "frames": 29
+      },
+      {
+        "bv": "game_id_1892",
+        "frames": 21
+      },
+      {
+        "bv": "game_id_1893",
+        "frames": 23
+      },
+      {
+        "bv": "game_id_18950",
+        "frames": 22
+      },
+      {
+        "bv": "game_id_1896",
+        "frames": 30
+      },
+      {
+        "bv": "game_id_1898",
+        "frames": 25
+      },
+      {
+        "bv": "game_id_1904",
+        "frames": 44
+      },
+      {
+        "bv": "game_id_1906",
+        "frames": 37
+      },
+      {
+        "bv": "game_id_19140",
+        "frames": 19
+      },
+      {
+        "bv": "game_id_2598",
+        "frames": 30
+      },
+      {
+        "bv": "game_id_2599",
+        "frames": 30
+      },
+      {
+        "bv": "game_id_5736",
+        "frames": 16
+      },
+      {
+        "bv": "game_id_57700",
+        "frames": 27
+      },
+      {
+        "bv": "game_id_57790",
+        "frames": 19
+      },
+      {
+        "bv": "game_id_57810",
+        "frames": 24
+      },
+      {
+        "bv": "game_id_5788",
+        "frames": 24
+      },
+      {
+        "bv": "game_id_5792",
+        "frames": 25
+      },
+      {
+        "bv": "game_id_5793",
+        "frames": 22
+      },
+      {
+        "bv": "game_id_5802",
+        "frames": 32
+      },
+      {
+        "bv": "game_id_5806",
+        "frames": 37
+      },
+      {
+        "bv": "game_id_5807",
+        "frames": 29
+      },
+      {
+        "bv": "game_id_5809",
+        "frames": 52
+      },
+      {
+        "bv": "game_id_5812",
+        "frames": 23
+      },
+      {
+        "bv": "game_id_5812#2",
+        "frames": 27
+      },
+      {
+        "bv": "game_id_5813",
+        "frames": 37
+      },
+      {
+        "bv": "game_id_5814",
+        "frames": 23
+      },
+      {
+        "bv": "game_id_58140",
+        "frames": 22
+      },
+      {
+        "bv": "game_id_5815",
+        "frames": 24
+      },
+      {
+        "bv": "game_id_5824",
+        "frames": 34
+      },
+      {
+        "bv": "game_id_5824#2",
+        "frames": 28
+      },
+      {
+        "bv": "game_id_5827",
+        "frames": 25
+      },
+      {
+        "bv": "game_id_5827#2",
+        "frames": 37
+      },
+      {
+        "bv": "game_id_5828",
+        "frames": 32
+      },
+      {
+        "bv": "game_id_5830",
+        "frames": 38
+      },
+      {
+        "bv": "game_id_5833",
+        "frames": 25
+      },
+      {
+        "bv": "game_id_5834",
+        "frames": 26
+      },
+      {
+        "bv": "game_id_5835",
+        "frames": 21
+      },
+      {
+        "bv": "game_id_5836",
+        "frames": 31
+      },
+      {
+        "bv": "game_id_5839",
+        "frames": 22
+      },
+      {
+        "bv": "game_id_5842",
+        "frames": 25
+      },
+      {
+        "bv": "game_id_5846",
+        "frames": 28
+      },
+      {
+        "bv": "game_id_5850",
+        "frames": 36
+      },
+      {
+        "bv": "game_id_5852",
+        "frames": 25
+      },
+      {
+        "bv": "game_id_5855",
+        "frames": 24
+      },
+      {
+        "bv": "game_id_5860",
+        "frames": 35
+      },
+      {
+        "bv": "game_id_5863",
+        "frames": 34
+      },
+      {
+        "bv": "game_id_8773",
+        "frames": 26
+      },
+      {
+        "bv": "game_id_8804",
+        "frames": 23
+      },
+      {
+        "bv": "game_id_88060",
+        "frames": 34
+      },
+      {
+        "bv": "game_id_8811",
+        "frames": 17
+      },
+      {
+        "bv": "game_id_8813",
+        "frames": 47
+      },
+      {
+        "bv": "game_id_8817",
+        "frames": 49
+      },
+      {
+        "bv": "game_id_88200",
+        "frames": 29
+      },
+      {
+        "bv": "game_id_8821",
+        "frames": 25
+      },
+      {
+        "bv": "game_id_8822",
+        "frames": 33
+      },
+      {
+        "bv": "game_id_88290",
+        "frames": 23
+      },
+      {
+        "bv": "game_id_8831",
+        "frames": 39
+      },
+      {
+        "bv": "game_id_8832",
+        "frames": 32
+      },
+      {
+        "bv": "game_id_8833",
+        "frames": 21
+      },
+      {
+        "bv": "game_id_88340",
+        "frames": 45
+      },
+      {
+        "bv": "game_id_8835",
+        "frames": 23
+      },
+      {
+        "bv": "game_id_8837",
+        "frames": 27
+      },
+      {
+        "bv": "game_id_8840",
+        "frames": 33
+      },
+      {
+        "bv": "game_id_8842",
+        "frames": 23
+      },
+      {
+        "bv": "game_id_8845",
+        "frames": 20
+      },
+      {
+        "bv": "game_id_88460",
+        "frames": 24
+      },
+      {
+        "bv": "game_id_8847",
+        "frames": 23
+      },
+      {
+        "bv": "game_id_8848",
+        "frames": 35
+      },
+      {
+        "bv": "game_id_8851",
+        "frames": 22
+      },
+      {
+        "bv": "game_id_8852",
+        "frames": 51
+      },
+      {
+        "bv": "game_id_8853",
+        "frames": 27
+      },
+      {
+        "bv": "game_id_8856",
+        "frames": 16
+      },
+      {
+        "bv": "game_id_8857",
+        "frames": 30
+      },
+      {
+        "bv": "game_id_8859",
+        "frames": 41
+      },
+      {
+        "bv": "game_id_8860",
+        "frames": 22
+      },
+      {
+        "bv": "game_id_88600",
+        "frames": 36
+      },
+      {
+        "bv": "game_id_8861",
+        "frames": 32
+      },
+      {
+        "bv": "game_id_88620",
+        "frames": 39
+      },
+      {
+        "bv": "game_id_8865",
+        "frames": 31
+      },
+      {
+        "bv": "game_id_8870",
+        "frames": 32
+      },
+      {
+        "bv": "game_id_8874",
+        "frames": 40
+      },
+      {
+        "bv": "game_id_9815",
+        "frames": 22
+      }
+    ]
+  }
+}

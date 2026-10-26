@@ -1,6 +1,12 @@
 # 王者荣耀对局决策建议系统 — 技术方案 v0.3
 
 > 目标：在当前版本、当前已知信息下，对每个决策时机输出后推 10–20s 的近似最优决策建议（人执行，AI 不操作）。
+>
+> **版本/指标说明（2026-10-25）**：文件名保留 `tech-plan-v0.1.md` 以维持 README 与根文档链接；
+> 正文标题为 v0.3，后续 §9–§11 已迭代至 v0.8。当前英雄数 **132**（不是 120）。
+> §9 的 acc 0.939 / 0.952 与 `attention_value.pt` / `next_token.pt` 是早期 Win 本地 demo 产物；
+> 当前仓库只有 `attention_value_real/td` 与 `dota2_*`，指标分别为 **acc 0.687 / R² 0.163**。
+> 以代码和 `data/S45/models/*.json` 为准。
 
 ---
 
@@ -140,7 +146,7 @@
 实现分三层，全部建立在数据层 hero_id 之上：
 
 1. **英雄嵌入（hero embedding）**：共享状态编码器输出 + 可学习 hero embedding，作为价值/行为/候选生成所有头的条件输入；版本更新英雄数值时只换数据层，embedding 语义保持稳定；
-2. **职业先验 + 英雄专属 adaptor**：六个职业（战士/射手/法师/刺客/坦克/辅助）各一套基础参数，每个英雄在职业先验上做小参数 adaptor——解决 120 英雄的冷启动与数据不均衡问题；
+2. **职业先验 + 英雄专属 adaptor**：六个职业（战士/射手/法师/刺客/坦克/辅助）各一套基础参数，每个英雄在职业先验上做小参数 adaptor——解决 132 英雄的冷启动与数据不均衡问题；
 3. **英雄条件候选集**：3.2 的候选模板按 hero_id 实例化，保证"候选动作集合内的最优"对每个英雄都有意义（例：辅助不会出现"单人开龙"候选）。
 
 先例：绝悟用统一 actor-critic 网络 + 英雄条件输入覆盖 40+ 英雄（[JueWu 论文](https://arxiv.org/abs/2011.12692)："a unified actor-critic network architecture to capture the playing mechanics and actions of different heroes"）；异构智能体 RL 的独立策略范式见 [HARL](https://developer.volcengine.com/articles/7533523266711846921)。角色级特征对胜负预测有区分度亦有实证（[LoL 按角色胜负预测](https://github.com/KyungRyeolBaek/LoL-Match-Prediction)）。
@@ -190,14 +196,14 @@
   - Q = 局势上下文编码（时间、经济饱和度、敌方输出、己方血量、塔差、龙可用）
   - K = 每个价值维度的可学习键
 - 训练：logistic 拟合胜负标签，`src/hok_decision/model/attention_value.py`
-- 产物：`data/S45/models/attention_value.pt` / `.json`
+- 产物：`data/S45/models/attention_value.pt` / `.json`（历史 demo；当前产物为 `attention_value_real.pt/json` 与 `attention_value_td.pt/json`）
 - Win RTX 5080 实测：acc 0.939；**经济饱和后经济权重 436.7 → 143.1（ratio 0.33）**，符合"15 分钟后经济无价值"的目标形态
 
 ### 9.2 GPT 式下一决策 token
 
 - 局势 token 序列：`[CLS, 时间桶, 经济饱和桶, 敌方输出桶, 己方血量桶, 塔差桶, 龙桶]`
 - 因果 Transformer → 预测下一决策 token：`attack/retreat/farm/dragon/tower`
-- 代码：`src/hok_decision/model/next_token.py`；产物：`data/S45/models/next_token.pt`
+- 代码：`src/hok_decision/model/next_token.py`；产物：`data/S45/models/next_token.pt`（历史 demo，当前工作区未保留）
 - Win 实测：acc 0.952，loss 0.087
 
 ### 9.3 后续接入

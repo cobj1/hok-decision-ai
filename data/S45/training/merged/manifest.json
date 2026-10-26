@@ -1,0 +1,93 @@
+{
+  "hok_version": "S45",
+  "generated_from": [
+    "merge_report.json",
+    "tencent_rt_report.json"
+  ],
+  "sources": [
+    {
+      "file": "wzry_frames.jsonl",
+      "source": "WZRYagnt/data/matches + data/selfplay",
+      "schema_version": "2.0",
+      "sessions": 45,
+      "frames": 11055,
+      "coverage_pct": {
+        "action": 100.0,
+        "action_selfplay": 99.99,
+        "action_executor": 41.53,
+        "action_raw": 27.77,
+        "reward": 99.99,
+        "dead": 100.0,
+        "label": 100.0,
+        "self_hp": 62.23,
+        "self_mp": 60.16,
+        "self_position": 84.12,
+        "self_screen_pos": 26.13,
+        "skills": 12.84,
+        "lock_target": 52.84,
+        "top_bars": 13.13,
+        "banners": 39.67,
+        "phase": 100.0,
+        "self_hero_identity": 1.88,
+        "game_time": 0.51,
+        "roster": 1.88,
+        "battle_state": 1.88,
+        "monsters": 1.88,
+        "ally_4": 27.66,
+        "enemy_any": 25.26,
+        "enemy_5": 0.32,
+        "perception_ok": 97.78,
+        "towers": 100.0
+      },
+      "join_quality": {
+        "sessions_with_selfplay": 45,
+        "frames_with_selfplay": 11054,
+        "selfplay_dt_median_s": 0.047,
+        "selfplay_dt_p95_s": 0.258
+      },
+      "quality_tiers": {
+        "action": 10846,
+        "memory+action": 152,
+        "full": 56,
+        "pose": 1
+      }
+    },
+    {
+      "file": "tencent_rt_frames.jsonl",
+      "source": "Tencent Real-Time HoK Dataset (100-game sample)",
+      "games": 100,
+      "frames": 3046,
+      "coverage_pct": {
+        "hero_identity": 100.0,
+        "scoreboard_gold": 100.0,
+        "scoreboard_kills": 100.0,
+        "scoreboard_towers": 100.0,
+        "objectives": 100.0,
+        "game_time": 100.0,
+        "positions": 0.0,
+        "hp": 0.0,
+        "human_action": 0.0
+      }
+    }
+  ],
+  "combined_frames": 14101,
+  "capability_matrix": {
+    "positions": "WZRYagnt 84.1%（腾讯样本 0）",
+    "winner_label": "腾讯样本 100%（WZRYagnt 0）",
+    "game_time": "腾讯样本 100%（WZRYagnt 0.51%）",
+    "hero_identity": "腾讯样本 100%（WZRYagnt 1.88%）",
+    "human_action": "两者均 0；WZRYagnt 的 action 是 agent 自身动作",
+    "hp": "WZRYagnt 62.2%（腾讯 0）",
+    "reward": "WZRYagnt selfplay 99.99%（腾讯仅胜负标签）",
+    "towers": "腾讯 100%（真实存活）；WZRYagnt 仅小地图可见性，不可当存活状态"
+  },
+  "warnings": [
+    "WZRYagnt 的 action 来自 selfplay/executor，是 agent 自身操作，不是人类 swipe 标签",
+    "WZRYagnt 小地图塔点存在漏检/静态模板，只保留可见性，不输出塔存活状态",
+    "WZRYagnt 的龙/暴君/主宰仅 memory 会话有 mem_monsters，其余缺失",
+    "腾讯样本最后一行已剔除（100 局均为重置行）",
+    "腾讯样本无明确 license，仅限内部研究；勿提交到公开仓库",
+    "腾讯样本为 2019 旧版本，英雄/装备数值与 S45 不一致",
+    "10 个重复 game_id 已加 #2 后缀区分"
+  ]
+}

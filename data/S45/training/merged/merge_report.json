@@ -1,0 +1,1110 @@
+{
+  "generated_at": "2026-10-23T16:29:29.075901+00:00",
+  "schema_version": "2.0",
+  "hok_version": "S45",
+  "sources": {
+    "hok_static": "D:\\work\\aiKings\\hok-decision-ai\\data\\S45\\normalized",
+    "wzryagnt_matches": "D:\\work\\aiKings\\WZRYagnt\\data\\matches",
+    "wzryagnt_selfplay": "D:\\work\\aiKings\\WZRYagnt\\data\\selfplay",
+    "wzryagnt_action_events": "D:\\work\\aiKings\\WZRYagnt\\data\\action_events.jsonl",
+    "wzryagnt_rewards": "D:\\work\\aiKings\\WZRYagnt\\data\\rewards.jsonl"
+  },
+  "merged": {
+    "sessions": 44,
+    "frames": 11043,
+    "output": "D:\\work\\aiKings\\hok-decision-ai\\data\\S45\\training\\merged\\wzry_frames.jsonl",
+    "backup_v1": "D:\\work\\aiKings\\hok-decision-ai\\data\\S45\\training\\merged\\wzry_frames.v1.jsonl",
+    "tier_filter": null
+  },
+  "quality_gate": {
+    "rows": 11043,
+    "bad_json": 0,
+    "nonfinite_frames": 0,
+    "negative_elapsed_frames": 0,
+    "coverage_pct": {
+      "action": 100.0,
+      "reward": 99.99,
+      "self_position": 84.1,
+      "game_time": 0.51,
+      "quality_full": 0.51,
+      "quality_action_plus": 99.99
+    },
+    "checks": {
+      "rows_positive": true,
+      "json_valid": true,
+      "finite_values": true,
+      "non_negative_elapsed": true,
+      "action_coverage": true,
+      "reward_coverage": true,
+      "position_coverage": true,
+      "hokdata_copy_md5": true
+    },
+    "passed": true,
+    "hokdata_copy": {
+      "path": "D:\\work\\aiKings\\hokdata\\behavior\\dataset_behavior_v2.jsonl",
+      "exists": true,
+      "source_md5": "e821e10ad82fffde09349993bd4adead",
+      "copy_md5": "e821e10ad82fffde09349993bd4adead",
+      "md5_match": true
+    }
+  },
+  "field_coverage_pct": {
+    "action": 100.0,
+    "action_executor": 41.57,
+    "action_raw": 27.8,
+    "action_selfplay": 99.99,
+    "ally_4": 27.66,
+    "ally_hp_min": 13.52,
+    "author_camp": 97.56,
+    "banners": 39.65,
+    "battle_state": 1.88,
+    "capture_source": 100.0,
+    "dead": 100.0,
+    "enemy_5": 0.32,
+    "enemy_any": 25.18,
+    "enemy_hp_min": 1.63,
+    "event": 2.46,
+    "game_time": 0.51,
+    "label": 100.0,
+    "lock_target": 52.89,
+    "monsters": 1.88,
+    "perception_ok": 97.78,
+    "phase": 100.0,
+    "reward": 99.99,
+    "roster": 1.88,
+    "roster_carry": 0.96,
+    "roster_identity_enemy": 1.88,
+    "roster_identity_self": 1.88,
+    "self_hero_identity": 1.88,
+    "self_hp": 62.21,
+    "self_level": 1.88,
+    "self_mp": 60.14,
+    "self_position": 84.1,
+    "self_screen_pos": 26.1,
+    "skills": 12.86,
+    "top_bars": 13.15,
+    "towers": 100.0
+  },
+  "join_quality": {
+    "sessions_total": 44,
+    "sessions_with_selfplay": 44,
+    "frames_with_selfplay": 11042,
+    "selfplay_dt_median_s": 0.047,
+    "selfplay_dt_p95_s": 0.258,
+    "selfplay_dt_max_s": 0.947
+  },
+  "calibration": {
+    "affine": {
+      "x": [
+        0.98787,
+        21.84
+      ],
+      "y": [
+        0.96455,
+        1.8
+      ]
+    },
+    "reference": "terrain_anchors.json (416x424, S45)",
+    "validation": {
+      "pairs": 216268,
+      "median_px": 3.42,
+      "p95_px": 8.16,
+      "max_px": 8.49,
+      "under_12px_pct": 100.0
+    }
+  },
+  "camp_votes": {
+    "blue": 9243,
+    "red": 82
+  },
+  "action_breakdown": {
+    "map_move": 9828,
+    "none": 641,
+    "skill": 260,
+    "attack": 147,
+    "move": 82,
+    "restore": 43,
+    "recall": 41,
+    "combo": 1
+  },
+  "label_breakdown": {
+    "idle": 8861,
+    "recalling": 1335,
+    "dead": 405,
+    "attacking_enemy": 366,
+    "being_attacked": 68,
+    "clearing_minions": 6,
+    "being_tower_attacked": 2
+  },
+  "event_breakdown": {
+    "died": 85,
+    "be_attacked": 80,
+    "tower_kill": 40,
+    "recall_interrupted": 31,
+    "minion_clear": 24,
+    "assist": 6,
+    "be_tower_attacked": 4,
+    "hook": 2
+  },
+  "provenance": {
+    "action:selfplay": 11042,
+    "hp:ui": 6405,
+    "hp:selfplay": 276,
+    "hp:memory": 189,
+    "roster:memory_carry": 106,
+    "roster:memory": 102,
+    "time:ui.match_clock_offset": 39,
+    "time:ui.match_clock": 17,
+    "action:executor": 1
+  },
+  "quality_tiers": {
+    "action": 10834,
+    "memory+action": 152,
+    "full": 56,
+    "pose": 1
+  },
+  "static_join": {
+    "heroes": 132,
+    "items": 126,
+    "skills": 538,
+    "summoners": 11,
+    "terrain_anchors": 41,
+    "used": {
+      "terrain_anchors": "坐标参照与仿射标定",
+      "heroes/hero_stats": "hero_ename -> 名称/职业/基础数值（仅身份可得的帧）",
+      "items/skills/map": "本次未参与：WZRYagnt 无装备/技能序列与完整 scoreboard"
+    }
+  },
+  "gaps": [
+    "英雄身份：仅 memory 会话可逐帧确认（102 帧，carry 后 1.88%），其余依赖 roster 识别或人工补标",
+    "对局时间：仅 0.51% 帧有 match_clock/mem_clock_s，其余只有 session_elapsed_s",
+    "经济/击杀：仅 memory 会话与少量 UI 帧可得（1.88%），无法覆盖全部 11055 帧",
+    "防御塔：小地图塔点存在漏检/静态模板，只保留可见性；tower kills 仅基于 session 内事件，开局已拆塔会计错",
+    "龙/暴君/主宰：仅 memory 会话有 mem_monsters（1.88%），其余无可靠来源",
+    "动作标签：selfplay 是 agent 自身动作（非人类操作），executor 仅覆盖 41.5% 帧"
+  ],
+  "sessions": [
+    {
+      "session": "20261013_232101_334494",
+      "frames": 126,
+      "actions": 0,
+      "selfplay": "20261013_232100.jsonl",
+      "selfplay_frames": 126,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 124,
+      "self_hp_frames": 126,
+      "game_time_frames": 0,
+      "action_frames": 126,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 124
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-13T23:21:01.335467"
+    },
+    {
+      "session": "20261013_233602_678461",
+      "frames": 129,
+      "actions": 109,
+      "selfplay": "20261013_233602.jsonl",
+      "selfplay_frames": 129,
+      "executor_frames": 110,
+      "raw_action_frames": 0,
+      "self_position_frames": 127,
+      "self_hp_frames": 110,
+      "game_time_frames": 0,
+      "action_frames": 129,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 127
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-13T23:36:02.682607"
+    },
+    {
+      "session": "20261013_234110_098127",
+      "frames": 65,
+      "actions": 58,
+      "selfplay": "20261013_234109.jsonl",
+      "selfplay_frames": 65,
+      "executor_frames": 62,
+      "raw_action_frames": 0,
+      "self_position_frames": 64,
+      "self_hp_frames": 52,
+      "game_time_frames": 0,
+      "action_frames": 65,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 64
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-13T23:41:10.099652"
+    },
+    {
+      "session": "20261014_085127_510578",
+      "frames": 76,
+      "actions": 56,
+      "selfplay": "20261014_085127.jsonl",
+      "selfplay_frames": 76,
+      "executor_frames": 55,
+      "raw_action_frames": 0,
+      "self_position_frames": 76,
+      "self_hp_frames": 58,
+      "game_time_frames": 0,
+      "action_frames": 76,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 76
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T08:51:27.513637"
+    },
+    {
+      "session": "20261014_085500_395169",
+      "frames": 106,
+      "actions": 85,
+      "selfplay": "20261014_085500.jsonl",
+      "selfplay_frames": 106,
+      "executor_frames": 84,
+      "raw_action_frames": 0,
+      "self_position_frames": 106,
+      "self_hp_frames": 86,
+      "game_time_frames": 0,
+      "action_frames": 106,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 106
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T08:55:00.399347"
+    },
+    {
+      "session": "20261014_090015_974975",
+      "frames": 113,
+      "actions": 94,
+      "selfplay": "20261014_090015.jsonl",
+      "selfplay_frames": 113,
+      "executor_frames": 94,
+      "raw_action_frames": 0,
+      "self_position_frames": 113,
+      "self_hp_frames": 92,
+      "game_time_frames": 0,
+      "action_frames": 113,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 113
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T09:00:15.975960"
+    },
+    {
+      "session": "20261014_091105_386437",
+      "frames": 48,
+      "actions": 30,
+      "selfplay": "20261014_091105.jsonl",
+      "selfplay_frames": 48,
+      "executor_frames": 29,
+      "raw_action_frames": 0,
+      "self_position_frames": 48,
+      "self_hp_frames": 42,
+      "game_time_frames": 0,
+      "action_frames": 48,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 48
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T09:11:05.387409"
+    },
+    {
+      "session": "20261014_092001_153503",
+      "frames": 45,
+      "actions": 26,
+      "selfplay": "20261014_092000.jsonl",
+      "selfplay_frames": 45,
+      "executor_frames": 25,
+      "raw_action_frames": 0,
+      "self_position_frames": 45,
+      "self_hp_frames": 40,
+      "game_time_frames": 0,
+      "action_frames": 45,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 45
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T09:20:01.157617"
+    },
+    {
+      "session": "20261014_185407_223610",
+      "frames": 54,
+      "actions": 7,
+      "selfplay": "20261014_185406.jsonl",
+      "selfplay_frames": 54,
+      "executor_frames": 21,
+      "raw_action_frames": 0,
+      "self_position_frames": 54,
+      "self_hp_frames": 52,
+      "game_time_frames": 0,
+      "action_frames": 54,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 54
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T18:54:07.226647"
+    },
+    {
+      "session": "20261014_185703_161120",
+      "frames": 111,
+      "actions": 9,
+      "selfplay": "20261014_185702.jsonl",
+      "selfplay_frames": 111,
+      "executor_frames": 44,
+      "raw_action_frames": 0,
+      "self_position_frames": 111,
+      "self_hp_frames": 107,
+      "game_time_frames": 0,
+      "action_frames": 111,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 111
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T18:57:03.165540"
+    },
+    {
+      "session": "20261014_211009_223882",
+      "frames": 31,
+      "actions": 14,
+      "selfplay": "20261014_211008.jsonl",
+      "selfplay_frames": 31,
+      "executor_frames": 30,
+      "raw_action_frames": 0,
+      "self_position_frames": 29,
+      "self_hp_frames": 24,
+      "game_time_frames": 0,
+      "action_frames": 31,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 29
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T21:10:09.228016"
+    },
+    {
+      "session": "20261014_212323_810426",
+      "frames": 118,
+      "actions": 114,
+      "selfplay": "20261014_212323.jsonl",
+      "selfplay_frames": 118,
+      "executor_frames": 117,
+      "raw_action_frames": 0,
+      "self_position_frames": 118,
+      "self_hp_frames": 106,
+      "game_time_frames": 0,
+      "action_frames": 118,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 118
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T21:23:23.811401"
+    },
+    {
+      "session": "20261014_213943_435193",
+      "frames": 77,
+      "actions": 67,
+      "selfplay": "20261014_213943.jsonl",
+      "selfplay_frames": 77,
+      "executor_frames": 76,
+      "raw_action_frames": 0,
+      "self_position_frames": 77,
+      "self_hp_frames": 63,
+      "game_time_frames": 0,
+      "action_frames": 77,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 77
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T21:39:43.438809"
+    },
+    {
+      "session": "20261014_215430_118604",
+      "frames": 18,
+      "actions": 1,
+      "selfplay": "20261014_215429.jsonl",
+      "selfplay_frames": 18,
+      "executor_frames": 17,
+      "raw_action_frames": 0,
+      "self_position_frames": 18,
+      "self_hp_frames": 16,
+      "game_time_frames": 0,
+      "action_frames": 18,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 18
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T21:54:30.120601"
+    },
+    {
+      "session": "20261014_215452_897426",
+      "frames": 102,
+      "actions": 95,
+      "selfplay": "20261014_215429.jsonl",
+      "selfplay_frames": 102,
+      "executor_frames": 101,
+      "raw_action_frames": 0,
+      "self_position_frames": 102,
+      "self_hp_frames": 89,
+      "game_time_frames": 0,
+      "action_frames": 102,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 102
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T21:54:52.900705"
+    },
+    {
+      "session": "20261014_215557_173543",
+      "frames": 298,
+      "actions": 138,
+      "selfplay": "20261014_215429.jsonl",
+      "selfplay_frames": 298,
+      "executor_frames": 168,
+      "raw_action_frames": 0,
+      "self_position_frames": 90,
+      "self_hp_frames": 78,
+      "game_time_frames": 0,
+      "action_frames": 298,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 90
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T21:55:57.175648"
+    },
+    {
+      "session": "20261014_220019_630602",
+      "frames": 183,
+      "actions": 130,
+      "selfplay": "20261014_220019.jsonl",
+      "selfplay_frames": 183,
+      "executor_frames": 164,
+      "raw_action_frames": 0,
+      "self_position_frames": 179,
+      "self_hp_frames": 136,
+      "game_time_frames": 0,
+      "action_frames": 183,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 179
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T22:00:19.634769"
+    },
+    {
+      "session": "20261014_221246_511379",
+      "frames": 129,
+      "actions": 103,
+      "selfplay": "20261014_221246.jsonl",
+      "selfplay_frames": 129,
+      "executor_frames": 103,
+      "raw_action_frames": 0,
+      "self_position_frames": 126,
+      "self_hp_frames": 116,
+      "game_time_frames": 0,
+      "action_frames": 129,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 126
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T22:12:46.515651"
+    },
+    {
+      "session": "20261014_230437_019174",
+      "frames": 30,
+      "actions": 13,
+      "selfplay": "20261014_230436.jsonl",
+      "selfplay_frames": 30,
+      "executor_frames": 12,
+      "raw_action_frames": 0,
+      "self_position_frames": 30,
+      "self_hp_frames": 27,
+      "game_time_frames": 0,
+      "action_frames": 30,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 30
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T23:04:37.020218"
+    },
+    {
+      "session": "20261014_230519_523589",
+      "frames": 25,
+      "actions": 25,
+      "selfplay": "20261014_230436.jsonl",
+      "selfplay_frames": 25,
+      "executor_frames": 24,
+      "raw_action_frames": 0,
+      "self_position_frames": 25,
+      "self_hp_frames": 25,
+      "game_time_frames": 0,
+      "action_frames": 25,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 25
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T23:05:19.528184"
+    },
+    {
+      "session": "20261014_231406_543400",
+      "frames": 111,
+      "actions": 83,
+      "selfplay": "20261014_231406.jsonl",
+      "selfplay_frames": 111,
+      "executor_frames": 83,
+      "raw_action_frames": 0,
+      "self_position_frames": 109,
+      "self_hp_frames": 84,
+      "game_time_frames": 0,
+      "action_frames": 111,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 109
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T23:14:06.545399"
+    },
+    {
+      "session": "20261014_231906_974412",
+      "frames": 78,
+      "actions": 41,
+      "selfplay": "20261014_231906.jsonl",
+      "selfplay_frames": 78,
+      "executor_frames": 75,
+      "raw_action_frames": 0,
+      "self_position_frames": 71,
+      "self_hp_frames": 78,
+      "game_time_frames": 0,
+      "action_frames": 78,
+      "roster_frames": 0,
+      "camp": "red",
+      "camp_votes": {
+        "red": 71
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-14T23:19:06.977587"
+    },
+    {
+      "session": "20261015_002532_682861",
+      "frames": 78,
+      "actions": 0,
+      "selfplay": "20261015_002532.jsonl",
+      "selfplay_frames": 78,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 73,
+      "self_hp_frames": 78,
+      "game_time_frames": 0,
+      "action_frames": 78,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 73
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T00:25:32.683927"
+    },
+    {
+      "session": "20261015_002842_445656",
+      "frames": 409,
+      "actions": 382,
+      "selfplay": "20261015_002842.jsonl",
+      "selfplay_frames": 409,
+      "executor_frames": 382,
+      "raw_action_frames": 380,
+      "self_position_frames": 342,
+      "self_hp_frames": 409,
+      "game_time_frames": 0,
+      "action_frames": 409,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 342
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T00:28:42.446660"
+    },
+    {
+      "session": "20261015_093155_260116",
+      "frames": 191,
+      "actions": 166,
+      "selfplay": "20261015_093155.jsonl",
+      "selfplay_frames": 191,
+      "executor_frames": 166,
+      "raw_action_frames": 164,
+      "self_position_frames": 2,
+      "self_hp_frames": 168,
+      "game_time_frames": 0,
+      "action_frames": 191,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 2
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T09:31:55.262196"
+    },
+    {
+      "session": "20261015_093256_583211",
+      "frames": 106,
+      "actions": 106,
+      "selfplay": "20261015_093155.jsonl",
+      "selfplay_frames": 106,
+      "executor_frames": 106,
+      "raw_action_frames": 105,
+      "self_position_frames": 92,
+      "self_hp_frames": 106,
+      "game_time_frames": 0,
+      "action_frames": 106,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 92
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T09:32:56.585232"
+    },
+    {
+      "session": "20261015_093424_741539",
+      "frames": 327,
+      "actions": 311,
+      "selfplay": "20261015_093424.jsonl",
+      "selfplay_frames": 326,
+      "executor_frames": 326,
+      "raw_action_frames": 322,
+      "self_position_frames": 272,
+      "self_hp_frames": 327,
+      "game_time_frames": 0,
+      "action_frames": 327,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 272
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T09:34:24.745066"
+    },
+    {
+      "session": "20261015_114142_519832",
+      "frames": 1074,
+      "actions": 1043,
+      "selfplay": "20261015_114142.jsonl",
+      "selfplay_frames": 1074,
+      "executor_frames": 1050,
+      "raw_action_frames": 1049,
+      "self_position_frames": 835,
+      "self_hp_frames": 1074,
+      "game_time_frames": 0,
+      "action_frames": 1074,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 835
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T11:41:42.523930"
+    },
+    {
+      "session": "20261015_120723_288705",
+      "frames": 11,
+      "actions": 2,
+      "selfplay": "20261015_120722.jsonl",
+      "selfplay_frames": 11,
+      "executor_frames": 10,
+      "raw_action_frames": 8,
+      "self_position_frames": 9,
+      "self_hp_frames": 10,
+      "game_time_frames": 0,
+      "action_frames": 11,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 9
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T12:07:23.292274"
+    },
+    {
+      "session": "20261015_120907_424983",
+      "frames": 10,
+      "actions": 10,
+      "selfplay": "20261015_120722.jsonl",
+      "selfplay_frames": 10,
+      "executor_frames": 10,
+      "raw_action_frames": 10,
+      "self_position_frames": 6,
+      "self_hp_frames": 10,
+      "game_time_frames": 0,
+      "action_frames": 10,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 6
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T12:09:07.426963"
+    },
+    {
+      "session": "20261015_121355_069386",
+      "frames": 5,
+      "actions": 5,
+      "selfplay": "20261015_120722.jsonl",
+      "selfplay_frames": 5,
+      "executor_frames": 5,
+      "raw_action_frames": 5,
+      "self_position_frames": 5,
+      "self_hp_frames": 5,
+      "game_time_frames": 0,
+      "action_frames": 5,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 5
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T12:13:55.070977"
+    },
+    {
+      "session": "20261015_122552_016278",
+      "frames": 918,
+      "actions": 879,
+      "selfplay": "20261015_122551.jsonl",
+      "selfplay_frames": 918,
+      "executor_frames": 900,
+      "raw_action_frames": 896,
+      "self_position_frames": 606,
+      "self_hp_frames": 918,
+      "game_time_frames": 0,
+      "action_frames": 918,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 606
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T12:25:52.019215"
+    },
+    {
+      "session": "20261015_222142_881258",
+      "frames": 49,
+      "actions": 49,
+      "selfplay": "20261015_222142.jsonl",
+      "selfplay_frames": 49,
+      "executor_frames": 48,
+      "raw_action_frames": 42,
+      "self_position_frames": 40,
+      "self_hp_frames": 49,
+      "game_time_frames": 0,
+      "action_frames": 49,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 40
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T22:21:42.885119"
+    },
+    {
+      "session": "20261015_223153_152879",
+      "frames": 49,
+      "actions": 49,
+      "selfplay": "20261015_223152.jsonl",
+      "selfplay_frames": 49,
+      "executor_frames": 48,
+      "raw_action_frames": 43,
+      "self_position_frames": 49,
+      "self_hp_frames": 49,
+      "game_time_frames": 0,
+      "action_frames": 49,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 49
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T22:31:53.159392"
+    },
+    {
+      "session": "20261015_225822_253681",
+      "frames": 47,
+      "actions": 42,
+      "selfplay": "20261015_225821.jsonl",
+      "selfplay_frames": 47,
+      "executor_frames": 46,
+      "raw_action_frames": 46,
+      "self_position_frames": 11,
+      "self_hp_frames": 47,
+      "game_time_frames": 0,
+      "action_frames": 47,
+      "roster_frames": 0,
+      "camp": "red",
+      "camp_votes": {
+        "red": 11
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-15T22:58:22.259192"
+    },
+    {
+      "session": "20261017_162901_384146",
+      "frames": 1180,
+      "actions": 0,
+      "selfplay": "20261017_162901.jsonl",
+      "selfplay_frames": 1180,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 1180,
+      "self_hp_frames": 1180,
+      "game_time_frames": 0,
+      "action_frames": 1180,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 1180
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-17T16:29:01.388304"
+    },
+    {
+      "session": "20261017_164149_269145",
+      "frames": 305,
+      "actions": 0,
+      "selfplay": "20261017_164148.jsonl",
+      "selfplay_frames": 305,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 305,
+      "self_hp_frames": 305,
+      "game_time_frames": 0,
+      "action_frames": 305,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 305
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-17T16:41:49.272192"
+    },
+    {
+      "session": "20261017_165546_503488",
+      "frames": 320,
+      "actions": 0,
+      "selfplay": "20261017_165546.jsonl",
+      "selfplay_frames": 320,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 320,
+      "self_hp_frames": 320,
+      "game_time_frames": 0,
+      "action_frames": 320,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 320
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-17T16:55:46.507242"
+    },
+    {
+      "session": "20261017_171635_923255",
+      "frames": 270,
+      "actions": 0,
+      "selfplay": "20261017_171635.jsonl",
+      "selfplay_frames": 270,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 0,
+      "self_hp_frames": 0,
+      "game_time_frames": 0,
+      "action_frames": 270,
+      "roster_frames": 0,
+      "camp": null,
+      "camp_votes": {},
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-17T17:16:35.926688"
+    },
+    {
+      "session": "20261018_144140_821221",
+      "frames": 381,
+      "actions": 0,
+      "selfplay": "20261018_144139.jsonl",
+      "selfplay_frames": 381,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 381,
+      "self_hp_frames": 0,
+      "game_time_frames": 0,
+      "action_frames": 381,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 381
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-18T14:41:40.823907"
+    },
+    {
+      "session": "20261018_144334_007412",
+      "frames": 3032,
+      "actions": 0,
+      "selfplay": "20261018_144333.jsonl",
+      "selfplay_frames": 3032,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 2824,
+      "self_hp_frames": 0,
+      "game_time_frames": 0,
+      "action_frames": 3032,
+      "roster_frames": 0,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 2824
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-18T14:43:34.010957"
+    },
+    {
+      "session": "20261020_224657_708566",
+      "frames": 80,
+      "actions": 0,
+      "selfplay": "20261020_224656.jsonl",
+      "selfplay_frames": 80,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 21,
+      "self_hp_frames": 80,
+      "game_time_frames": 0,
+      "action_frames": 80,
+      "roster_frames": 80,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 21
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-20T22:46:57.720070"
+    },
+    {
+      "session": "20261020_224928_770332",
+      "frames": 72,
+      "actions": 0,
+      "selfplay": "20261020_224928.jsonl",
+      "selfplay_frames": 72,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 72,
+      "self_hp_frames": 72,
+      "game_time_frames": 0,
+      "action_frames": 72,
+      "roster_frames": 72,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 72
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "manifest_started_at": "2026-10-20T22:49:28.775103"
+    },
+    {
+      "session": "20261020_225206_601007",
+      "frames": 56,
+      "actions": 0,
+      "selfplay": "20261020_225205.jsonl",
+      "selfplay_frames": 56,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 0,
+      "self_hp_frames": 56,
+      "game_time_frames": 56,
+      "action_frames": 56,
+      "roster_frames": 56,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 38
+      },
+      "clock_offset": 1792506177.775629,
+      "clock_source": "ui.match_clock",
+      "manifest_started_at": "2026-10-20T22:52:06.606748"
+    }
+  ]
+}

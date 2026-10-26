@@ -1,0 +1,42 @@
+{
+  "context_features": [
+    "time_norm",
+    "econ_sat",
+    "enemy_threat",
+    "own_hp_frac",
+    "tower_adv",
+    "dragon_avail",
+    "team_aa_power",
+    "team_caster_power",
+    "build_attack_power",
+    "build_defense_power",
+    "build_utility_power",
+    "skill_power",
+    "match_level"
+  ],
+  "value_features": [
+    "hp_diff",
+    "economy_diff",
+    "small_camp_diff",
+    "red_buff_diff",
+    "blue_buff_diff",
+    "tyrant_diff",
+    "overlord_diff",
+    "storm_dragon_diff",
+    "tower_diff",
+    "kill_diff"
+  ],
+  "d_model": 32,
+  "metrics": {
+    "mse": 0.34802915768059556,
+    "r2": 0.1626601710502411,
+    "per_interval_r2": {
+      "30": 0.4555,
+      "60": 0.2541,
+      "120": 0.1759,
+      "180": 0.1381,
+      "300": 0.0523
+    },
+    "samples": 12930
+  }
+}

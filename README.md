@@ -11,16 +11,36 @@
 ```
 src/hok_decision/
   config.py            版本标签与数据源 URL
+  cli.py               命令行入口（crawl / status / calibrate）
   schema/models.py     结构化数据模型（Pydantic v2）
   crawlers/            官方 JSON / 英雄数值与技能 / 营地导入 / 地图机制 / 地形图源
   simulator/           地图加载、伤害公式、单位、资源刷新调度与步进引擎
   search/              P2 搜索骨架：宏观候选动作 + 束搜索 + 可校准价值函数
-  model/               Transformer 模型（Win torch：注意力二阶权重 + 下一决策 token）
+  model/               Transformer 模型（注意力二阶权重 / next-token / state_tokenizer / level_classifier）
+  rules/               硬规则（辅助装按局内角色、装备/技能约束）
 data/S45/
   raw/                 原始抓取产物（官方地图图片资产、技能页、二手数值源、地图候选图）
-  normalized/          归一化 JSON（英雄/装备/召唤师技能/地图/英雄技能/英雄数值/地形锚点）
-tests/                 43 项测试（伤害手算、地图加载、引擎确定性、资源调度、搜索、价值校准、上下文价值）
-docs/tech-plan-v0.1.md 技术方案
+  normalized/          归一化 JSON（英雄/装备/召唤师技能/地图/英雄技能/英雄数值/地形锚点/向量/价值权重）
+  models/              训练产物（当前：attention_value_real/td、dota2_action_prior*）
+scripts/               数据构建/训练/审计脚本
+tests/                 23 个测试文件 / 84 个 test_ 函数（静态统计；pytest 收集数可能更多）
+docs/tech-plan-v0.1.md 技术方案（文件名为历史命名，正文已更新到 v0.8）
+```
+
+> 当前模型指标以 `data/S45/models/registry.json` 为准（由 `scripts/model_registry.py --strict` 生成）：
+> 注意力价值 val acc **0.687**（基线 0.619）、TD 价值 MSE/R² **0.163**；Dota2 动作先验 test acc
+> **0.4855 / 0.5535**（基线 0.3204）。tech-plan 中的 0.939/0.957 是早期 Win 本地 demo 指标，不可直接复现。
+
+```bash
+# 数据契约审计（split / frame_id / 标签 / 零方差特征）
+python scripts/audit_dataset.py --data ../hokdata/dataset/dataset_final_v4.jsonl \
+    --splits ../hokdata/splits.json --namespace tencent_rt
+
+# 模型评估门槛（任一权重无有效指标则退出 1）
+python scripts/model_registry.py --strict
+
+# 行为数据 -> 固定 16 维特征/标签（按 session split，防泄漏）
+python scripts/build_frame_features.py
 ```
 
 ## 使用
