@@ -202,6 +202,36 @@ def _build_behavior(root: Path) -> dict:
     return {"file": str(out), "sessions": len(sessions), "frames": frames, "splits": dict(Counter(e["split"] for e in sessions.values()))}
 
 
+def _measure_behavior(path: Path) -> dict:
+    """实测 behavior JSONL 的字段覆盖率。
+
+    manifest 的 capabilities 必须来自这里 ——— 写死会在语料增长后说谎（2026-10-26：
+    写死 positions 84.1% / reward 99.99%，实测 80.34% / 98.31%）。
+    """
+    frames = 0
+    pos = action = reward = game_time = result = 0
+    for line in path.open("r", encoding="utf-8"):
+        if not line.strip():
+            continue
+        try:
+            d = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        frames += 1
+        if any((h or {}).get("side") == "self" for h in (d.get("heroes") or [])):
+            pos += 1
+        action += int(d.get("action") is not None)
+        reward += int(d.get("reward") is not None)
+        game_time += int(d.get("game_time_s") is not None)
+        result += int(d.get("result") is not None)
+
+    def pct(n: int) -> float:
+        return round(100.0 * n / max(1, frames), 2)
+
+    return {"frames": frames, "position": pct(pos), "action": pct(action),
+            "reward": pct(reward), "game_time": pct(game_time), "result": pct(result)}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", default=str(PROJECT_ROOT.parent / "hokdata"))
@@ -213,6 +243,8 @@ def main() -> int:
 
     tencent = _build_tencent(root)
     behavior = _build_behavior(root)
+    measured = _measure_behavior(Path(behavior["file"]))
+    behavior = {**behavior, "field_coverage": measured}
 
     tencent_meta = json.loads((root / "dataset" / "meta.json").read_text(encoding="utf-8"))
     behavior_meta = json.loads((root / "behavior" / "meta.json").read_text(encoding="utf-8"))
@@ -248,12 +280,13 @@ def main() -> int:
         },
         "capabilities": {
             "winner_label": "tencent_rt 100%",
-            "game_time": "tencent_rt 100%",
+            "game_time": f"tencent_rt 100%；wzry_behavior {measured['game_time']}%",
             "hero_identity": "tencent_rt 100%",
             "scoreboard": "tencent_rt 100%",
-            "positions": "wzry_behavior 84.1%",
-            "action": "wzry_behavior 100%（selfplay join）",
-            "reward": "wzry_behavior 99.99%",
+            "positions": f"wzry_behavior {measured['position']}%",
+            "action": f"wzry_behavior {measured['action']}%（selfplay join）",
+            "reward": f"wzry_behavior {measured['reward']}%",
+            "result": f"wzry_behavior {measured['result']}%（会话级标签下放到帧）",
             "human_action": "0（待录制）",
             "level_id": "0（待补段位）",
         },

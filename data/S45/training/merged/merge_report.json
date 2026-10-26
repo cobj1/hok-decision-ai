@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T16:29:29.075901+00:00",
+  "generated_at": "2026-10-26T14:40:12.828295+00:00",
   "schema_version": "2.0",
   "hok_version": "S45",
   "sources": {
@@ -10,24 +10,25 @@
     "wzryagnt_rewards": "D:\\work\\aiKings\\WZRYagnt\\data\\rewards.jsonl"
   },
   "merged": {
-    "sessions": 44,
-    "frames": 11043,
+    "sessions": 51,
+    "frames": 15929,
     "output": "D:\\work\\aiKings\\hok-decision-ai\\data\\S45\\training\\merged\\wzry_frames.jsonl",
     "backup_v1": "D:\\work\\aiKings\\hok-decision-ai\\data\\S45\\training\\merged\\wzry_frames.v1.jsonl",
     "tier_filter": null
   },
   "quality_gate": {
-    "rows": 11043,
+    "rows": 15929,
     "bad_json": 0,
     "nonfinite_frames": 0,
     "negative_elapsed_frames": 0,
     "coverage_pct": {
       "action": 100.0,
-      "reward": 99.99,
-      "self_position": 84.1,
-      "game_time": 0.51,
-      "quality_full": 0.51,
-      "quality_action_plus": 99.99
+      "reward": 98.31,
+      "self_position": 80.34,
+      "game_time": 19.16,
+      "result": 18.81,
+      "quality_full": 19.16,
+      "quality_action_plus": 98.31
     },
     "checks": {
       "rows_positive": true,
@@ -35,63 +36,63 @@
       "finite_values": true,
       "non_negative_elapsed": true,
       "action_coverage": true,
-      "reward_coverage": true,
+      "reward_coverage": false,
       "position_coverage": true,
-      "hokdata_copy_md5": true
+      "hokdata_copy_md5": false
     },
-    "passed": true,
+    "passed": false,
     "hokdata_copy": {
       "path": "D:\\work\\aiKings\\hokdata\\behavior\\dataset_behavior_v2.jsonl",
       "exists": true,
-      "source_md5": "e821e10ad82fffde09349993bd4adead",
-      "copy_md5": "e821e10ad82fffde09349993bd4adead",
-      "md5_match": true
+      "source_md5": "6d38334c99218ddd980121181666d88a",
+      "copy_md5": "9317537433e5dafc4962a3e159ca6db0",
+      "md5_match": false
     }
   },
   "field_coverage_pct": {
     "action": 100.0,
-    "action_executor": 41.57,
-    "action_raw": 27.8,
-    "action_selfplay": 99.99,
-    "ally_4": 27.66,
-    "ally_hp_min": 13.52,
-    "author_camp": 97.56,
-    "banners": 39.65,
-    "battle_state": 1.88,
+    "action_executor": 35.36,
+    "action_raw": 31.06,
+    "action_selfplay": 98.31,
+    "ally_4": 27.31,
+    "ally_hp_min": 20.15,
+    "author_camp": 98.3,
+    "banners": 38.54,
+    "battle_state": 31.98,
     "capture_source": 100.0,
     "dead": 100.0,
-    "enemy_5": 0.32,
-    "enemy_any": 25.18,
-    "enemy_hp_min": 1.63,
-    "event": 2.46,
-    "game_time": 0.51,
+    "enemy_5": 0.22,
+    "enemy_any": 42.46,
+    "enemy_hp_min": 2.02,
+    "event": 1.9,
+    "game_time": 19.16,
     "label": 100.0,
-    "lock_target": 52.89,
-    "monsters": 1.88,
-    "perception_ok": 97.78,
+    "lock_target": 67.34,
+    "monsters": 1.31,
+    "perception_ok": 98.3,
     "phase": 100.0,
-    "reward": 99.99,
-    "roster": 1.88,
-    "roster_carry": 0.96,
-    "roster_identity_enemy": 1.88,
-    "roster_identity_self": 1.88,
-    "self_hero_identity": 1.88,
-    "self_hp": 62.21,
-    "self_level": 1.88,
-    "self_mp": 60.14,
-    "self_position": 84.1,
-    "self_screen_pos": 26.1,
-    "skills": 12.86,
-    "top_bars": 13.15,
+    "reward": 98.31,
+    "roster": 31.98,
+    "roster_carry": 1.64,
+    "roster_identity_enemy": 31.98,
+    "roster_identity_self": 26.66,
+    "self_hero_identity": 26.66,
+    "self_hp": 73.8,
+    "self_level": 31.73,
+    "self_mp": 72.22,
+    "self_position": 80.34,
+    "self_screen_pos": 27.72,
+    "skills": 19.96,
+    "top_bars": 19.95,
     "towers": 100.0
   },
   "join_quality": {
-    "sessions_total": 44,
-    "sessions_with_selfplay": 44,
-    "frames_with_selfplay": 11042,
-    "selfplay_dt_median_s": 0.047,
-    "selfplay_dt_p95_s": 0.258,
-    "selfplay_dt_max_s": 0.947
+    "sessions_total": 51,
+    "sessions_with_selfplay": 51,
+    "frames_with_selfplay": 15660,
+    "selfplay_dt_median_s": 0.045,
+    "selfplay_dt_p95_s": 0.249,
+    "selfplay_dt_max_s": 0.999
   },
   "calibration": {
     "affine": {
@@ -106,62 +107,63 @@
     },
     "reference": "terrain_anchors.json (416x424, S45)",
     "validation": {
-      "pairs": 216268,
-      "median_px": 3.42,
+      "pairs": 300259,
+      "median_px": 3.38,
       "p95_px": 8.16,
       "max_px": 8.49,
       "under_12px_pct": 100.0
     }
   },
   "camp_votes": {
-    "blue": 9243,
-    "red": 82
+    "blue": 13388,
+    "red": 775
   },
   "action_breakdown": {
-    "map_move": 9828,
-    "none": 641,
-    "skill": 260,
-    "attack": 147,
-    "move": 82,
-    "restore": 43,
-    "recall": 41,
-    "combo": 1
+    "map_move": 14562,
+    "none": 711,
+    "skill": 298,
+    "attack": 168,
+    "move": 89,
+    "restore": 51,
+    "recall": 47,
+    "combo": 3
   },
   "label_breakdown": {
-    "idle": 8861,
-    "recalling": 1335,
-    "dead": 405,
-    "attacking_enemy": 366,
-    "being_attacked": 68,
+    "idle": 13533,
+    "recalling": 1468,
+    "attacking_enemy": 426,
+    "dead": 411,
+    "being_attacked": 83,
     "clearing_minions": 6,
     "being_tower_attacked": 2
   },
   "event_breakdown": {
-    "died": 85,
-    "be_attacked": 80,
+    "be_attacked": 100,
+    "died": 88,
     "tower_kill": 40,
-    "recall_interrupted": 31,
+    "recall_interrupted": 37,
     "minion_clear": 24,
     "assist": 6,
     "be_tower_attacked": 4,
-    "hook": 2
+    "hook": 3
   },
   "provenance": {
-    "action:selfplay": 11042,
-    "hp:ui": 6405,
+    "action:selfplay": 15660,
+    "hp:ui": 11268,
+    "roster:memory": 4832,
+    "time:ui.match_clock": 2822,
     "hp:selfplay": 276,
-    "hp:memory": 189,
-    "roster:memory_carry": 106,
-    "roster:memory": 102,
-    "time:ui.match_clock_offset": 39,
-    "time:ui.match_clock": 17,
+    "action:policy": 268,
+    "roster:memory_carry": 262,
+    "time:ui.match_clock_offset": 230,
+    "hp:memory": 212,
     "action:executor": 1
   },
   "quality_tiers": {
     "action": 10834,
-    "memory+action": 152,
-    "full": 56,
-    "pose": 1
+    "full": 3052,
+    "memory+action": 1774,
+    "pose": 269
   },
   "static_join": {
     "heroes": 132,
@@ -203,6 +205,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-13T23:21:01.335467"
     },
     {
@@ -224,6 +227,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-13T23:36:02.682607"
     },
     {
@@ -245,6 +249,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-13T23:41:10.099652"
     },
     {
@@ -266,6 +271,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T08:51:27.513637"
     },
     {
@@ -287,6 +293,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T08:55:00.399347"
     },
     {
@@ -308,6 +315,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T09:00:15.975960"
     },
     {
@@ -329,6 +337,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T09:11:05.387409"
     },
     {
@@ -350,6 +359,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T09:20:01.157617"
     },
     {
@@ -371,6 +381,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T18:54:07.226647"
     },
     {
@@ -392,6 +403,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T18:57:03.165540"
     },
     {
@@ -413,6 +425,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T21:10:09.228016"
     },
     {
@@ -434,6 +447,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T21:23:23.811401"
     },
     {
@@ -455,6 +469,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T21:39:43.438809"
     },
     {
@@ -476,6 +491,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T21:54:30.120601"
     },
     {
@@ -497,6 +513,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T21:54:52.900705"
     },
     {
@@ -518,6 +535,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T21:55:57.175648"
     },
     {
@@ -539,6 +557,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T22:00:19.634769"
     },
     {
@@ -560,6 +579,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T22:12:46.515651"
     },
     {
@@ -581,6 +601,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T23:04:37.020218"
     },
     {
@@ -602,6 +623,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T23:05:19.528184"
     },
     {
@@ -623,6 +645,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T23:14:06.545399"
     },
     {
@@ -644,6 +667,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-14T23:19:06.977587"
     },
     {
@@ -665,6 +689,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T00:25:32.683927"
     },
     {
@@ -686,6 +711,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T00:28:42.446660"
     },
     {
@@ -707,6 +733,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T09:31:55.262196"
     },
     {
@@ -728,6 +755,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T09:32:56.585232"
     },
     {
@@ -749,6 +777,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T09:34:24.745066"
     },
     {
@@ -770,6 +799,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T11:41:42.523930"
     },
     {
@@ -791,6 +821,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T12:07:23.292274"
     },
     {
@@ -812,6 +843,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T12:09:07.426963"
     },
     {
@@ -833,6 +865,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T12:13:55.070977"
     },
     {
@@ -854,6 +887,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T12:25:52.019215"
     },
     {
@@ -875,6 +909,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T22:21:42.885119"
     },
     {
@@ -896,6 +931,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T22:31:53.159392"
     },
     {
@@ -917,6 +953,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-15T22:58:22.259192"
     },
     {
@@ -938,6 +975,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-17T16:29:01.388304"
     },
     {
@@ -959,6 +997,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-17T16:41:49.272192"
     },
     {
@@ -980,6 +1019,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-17T16:55:46.507242"
     },
     {
@@ -999,6 +1039,7 @@
       "camp_votes": {},
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-17T17:16:35.926688"
     },
     {
@@ -1020,6 +1061,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-18T14:41:40.823907"
     },
     {
@@ -1041,6 +1083,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-18T14:43:34.010957"
     },
     {
@@ -1062,6 +1105,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-20T22:46:57.720070"
     },
     {
@@ -1083,6 +1127,7 @@
       },
       "clock_offset": null,
       "clock_source": null,
+      "result": null,
       "manifest_started_at": "2026-10-20T22:49:28.775103"
     },
     {
@@ -1104,7 +1149,163 @@
       },
       "clock_offset": 1792506177.775629,
       "clock_source": "ui.match_clock",
+      "result": null,
       "manifest_started_at": "2026-10-20T22:52:06.606748"
+    },
+    {
+      "session": "20261026_204124_344643",
+      "frames": 323,
+      "actions": 315,
+      "selfplay": "20261026_204123.jsonl",
+      "selfplay_frames": 323,
+      "executor_frames": 322,
+      "raw_action_frames": 322,
+      "self_position_frames": 0,
+      "self_hp_frames": 323,
+      "game_time_frames": 0,
+      "action_frames": 323,
+      "roster_frames": 323,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 300
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "result": null,
+      "manifest_started_at": "2026-10-26T20:41:24.346337"
+    },
+    {
+      "session": "20261026_204226_880912",
+      "frames": 602,
+      "actions": 596,
+      "selfplay": "20261026_204309.jsonl",
+      "selfplay_frames": 430,
+      "executor_frames": 602,
+      "raw_action_frames": 587,
+      "self_position_frames": 0,
+      "self_hp_frames": 602,
+      "game_time_frames": 0,
+      "action_frames": 602,
+      "roster_frames": 602,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 602
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "result": null,
+      "manifest_started_at": "2026-10-26T20:42:26.889044"
+    },
+    {
+      "session": "20261026_204309_982537",
+      "frames": 848,
+      "actions": 0,
+      "selfplay": "20261026_204309.jsonl",
+      "selfplay_frames": 848,
+      "executor_frames": 0,
+      "raw_action_frames": 758,
+      "self_position_frames": 693,
+      "self_hp_frames": 848,
+      "game_time_frames": 0,
+      "action_frames": 848,
+      "roster_frames": 848,
+      "camp": "red",
+      "camp_votes": {
+        "red": 693,
+        "blue": 151
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "result": null,
+      "manifest_started_at": "2026-10-26T20:43:09.994348"
+    },
+    {
+      "session": "20261026_204842_642716",
+      "frames": 20,
+      "actions": 20,
+      "selfplay": "20261026_204924.jsonl",
+      "selfplay_frames": 0,
+      "executor_frames": 20,
+      "raw_action_frames": 19,
+      "self_position_frames": 0,
+      "self_hp_frames": 20,
+      "game_time_frames": 0,
+      "action_frames": 20,
+      "roster_frames": 20,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 20
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "result": null,
+      "manifest_started_at": "2026-10-26T20:48:42.646365"
+    },
+    {
+      "session": "20261026_204901_971571",
+      "frames": 97,
+      "actions": 97,
+      "selfplay": "20261026_204924.jsonl",
+      "selfplay_frames": 21,
+      "executor_frames": 97,
+      "raw_action_frames": 96,
+      "self_position_frames": 0,
+      "self_hp_frames": 97,
+      "game_time_frames": 0,
+      "action_frames": 97,
+      "roster_frames": 97,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 97
+      },
+      "clock_offset": null,
+      "clock_source": null,
+      "result": null,
+      "manifest_started_at": "2026-10-26T20:49:01.972655"
+    },
+    {
+      "session": "20261026_204924_900027",
+      "frames": 158,
+      "actions": 0,
+      "selfplay": "20261026_204924.jsonl",
+      "selfplay_frames": 158,
+      "executor_frames": 0,
+      "raw_action_frames": 95,
+      "self_position_frames": 86,
+      "self_hp_frames": 158,
+      "game_time_frames": 158,
+      "action_frames": 158,
+      "roster_frames": 158,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 150
+      },
+      "clock_offset": 1793018424.8116763,
+      "clock_source": "ui.match_clock",
+      "result": "win",
+      "manifest_started_at": "2026-10-26T20:49:24.905459"
+    },
+    {
+      "session": "20261026_212503_169231",
+      "frames": 2838,
+      "actions": 0,
+      "selfplay": "20261026_212502.jsonl",
+      "selfplay_frames": 2838,
+      "executor_frames": 0,
+      "raw_action_frames": 0,
+      "self_position_frames": 2732,
+      "self_hp_frames": 2838,
+      "game_time_frames": 2838,
+      "action_frames": 2838,
+      "roster_frames": 2838,
+      "camp": "blue",
+      "camp_votes": {
+        "blue": 2825
+      },
+      "clock_offset": 1793020548.9910865,
+      "clock_source": "ui.match_clock",
+      "result": "loss",
+      "manifest_started_at": "2026-10-26T21:25:03.172760"
     }
   ]
 }

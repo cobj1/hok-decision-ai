@@ -179,6 +179,33 @@ def _load_sessions(matches: Path) -> list[tuple[Path, list[dict], list[dict], di
     return sessions
 
 
+_RESULT_ALIASES = {
+    "win": "win", "victory": "win", "胜利": "win",
+    "loss": "loss", "defeat": "loss", "失败": "loss",
+    "draw": "draw", "平局": "draw",
+}
+
+
+def _manifest_result(manifest: dict) -> str | None:
+    """从 WZRYagnt 的 manifest 取胜负，归一化成 win/loss/draw。
+
+    两种写法都见过：顶层 `result='win'`（`MatchRecorder.finalize` 写入）与
+    `meta.result={'value':'loss',...}`（`on_result` 写入）。帧级不带胜负时，
+    价值模型没有任何监督信号，所以这里必顶（缺失就返回 None，不猜）。
+    """
+    raw = manifest.get("result")
+    if isinstance(raw, dict):
+        raw = raw.get("value")
+    if raw is None:
+        raw = (manifest.get("meta") or {}).get("result")
+        if isinstance(raw, dict):
+            raw = raw.get("value")
+    if raw is None:
+        return None
+    text = str(raw).strip().lower()
+    return _RESULT_ALIASES.get(text, text or None)
+
+
 def _manifest_epoch(manifest: dict, states: list[dict]) -> float | None:
     started = manifest.get("started_at")
     if isinstance(started, str):
@@ -883,6 +910,7 @@ def _validate_output(
                 hero.get("side") == "self" for hero in frame.get("heroes") or []
             )
             counts["game_time"] += frame.get("game_time_s") is not None
+            counts["result"] += frame.get("result") is not None
             counts["quality_full"] += frame.get("quality_tier") == "full"
             counts["quality_action_plus"] += frame.get("quality_tier") in {"action", "memory+action", "full"}
     coverage = {key: round(100.0 * value / max(1, total), 2) for key, value in counts.items()}
@@ -973,6 +1001,7 @@ def main() -> int:
             first_t = float(states[0]["t"])
             last_t = float(states[-1]["t"])
             session_start = _manifest_epoch(manifest, states)
+            session_result = _manifest_result(manifest)
             linked_selfplay = _link_selfplay(session_start, first_t, last_t, selfplay)
 
             # 同局内 memory roster 的兜底：只在最近 30s 内复用，避免跨阶段污染。
@@ -1069,6 +1098,10 @@ def main() -> int:
                     static_meta=static_meta,
                     towers=towers,
                 )
+                # 胜负是 session 级标签（采集端已归一化成 win/loss/draw）；
+                # 帧级冗余一份，让下游按 splits 直接取监督信号，不必再反查 manifest。
+                if session_result is not None:
+                    frame["result"] = session_result
                 if tier_filter and frame["quality_tier"] not in tier_filter:
                     prev_t = t
                     continue
@@ -1173,6 +1206,7 @@ def main() -> int:
                     "camp_votes": dict(votes),
                     "clock_offset": clock_offset,
                     "clock_source": clock_source,
+                    "result": session_result,
                     "manifest_started_at": manifest.get("started_at"),
                 }
             )
