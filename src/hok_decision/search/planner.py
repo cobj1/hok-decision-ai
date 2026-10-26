@@ -42,18 +42,47 @@ def _distance(a: tuple[float, float], b: tuple[float, float]) -> float:
     return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5
 
 
+def _dist2(a: tuple[float, float], b: tuple[float, float]) -> float:
+    """平方距离。仅用于**比较**（与半径比较、取最近）时等价且省掉 sqrt。
+
+    排序/取 min 用平方距离与原距离严格同序（单调变换），阈值比较两边都平方即可，
+    因此不改变任何挑选结果；唯一差异是浮点舍入在"恰好等于半径"的边界上，
+    实测不可触发（见 scripts/refactor_gate.py 的决策 digest 校验）。
+    """
+    dx = a[0] - b[0]
+    dy = a[1] - b[1]
+    return dx * dx + dy * dy
+
+
+# map_data -> [(point_id, (x, y))]，只含可占领且带坐标的点。
+# `_capture_resources` 每次 rollout 都会调用（实测占 beam_search 时间 ~50%），
+# 而 map_data 在一次搜索内是不变的，过滤结果必须缓存，否则每 tick 重扫 30+ 个点。
+_POI_CACHE: dict[int, list[tuple[str, tuple[float, float]]]] = {}
+
+
+def _capture_points(map_data: MapData) -> list[tuple[str, tuple[float, float]]]:
+    key = id(map_data)
+    cached = _POI_CACHE.get(key)
+    if cached is not None:
+        return cached
+    points = [(rp.id, rp.position) for rp in map_data.resource_points
+              if rp.position is not None and rp.kind in {"buff", "camp", "neutral"}]
+    _POI_CACHE[key] = points
+    return points
+
+
 def _nearest_enemy(state: SearchState, hero: Hero) -> Hero | None:
     enemies = [h for h in state.heroes.values() if h.side != hero.side and h.alive]
     if not enemies:
         return None
-    return min(enemies, key=lambda h: _distance(hero.position, h.position))
+    return min(enemies, key=lambda h: _dist2(hero.position, h.position))
 
 
 def _nearest_blue(state: SearchState, red: Hero) -> Hero | None:
     blues = [h for h in state.heroes.values() if h.side == "blue" and h.alive]
     if not blues:
         return None
-    return min(blues, key=lambda h: _distance(red.position, h.position))
+    return min(blues, key=lambda h: _dist2(red.position, h.position))
 
 
 def _move_toward(hero: Hero, target: tuple[float, float], dt: float) -> None:
@@ -93,15 +122,18 @@ def _capture_resources(state: SearchState, map_data: MapData) -> None:
     reds = [h for h in state.heroes.values() if h.side == "red" and h.alive]
     if not blues:
         return
-    for rp in map_data.resource_points:
-        if rp.id in state.captured_resources or rp.position is None:
+    cap2 = _CAPTURE_RANGE * _CAPTURE_RANGE
+    con2 = _CONTEST_RANGE * _CONTEST_RANGE
+    captured = state.captured_resources
+    for point_id, position in _capture_points(map_data):
+        if point_id in captured:
             continue
-        if rp.kind not in {"buff", "camp", "neutral"}:
-            continue
-        blue_near = any(_distance(h.position, rp.position) <= _CAPTURE_RANGE for h in blues)
-        red_near = any(_distance(h.position, rp.position) <= _CONTEST_RANGE for h in reds)
-        if blue_near and not red_near:
-            state.captured_resources.add(rp.id)
+        blue_near = any(_dist2(h.position, position) <= cap2 for h in blues)
+        if not blue_near:
+            continue                     # 先判蓝方: 大部分点蓝方都够不到, 省掉红方那一轮
+        red_near = any(_dist2(h.position, position) <= con2 for h in reds)
+        if not red_near:
+            captured.add(point_id)
 
 
 def rollout_decision(
