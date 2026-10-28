@@ -13,7 +13,6 @@ r"""用 E:\hokdata\dataset\dataset_final_v4.jsonl 训练注意力二阶权重（
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import glob
 import os
@@ -26,6 +25,7 @@ import torch.nn as nn
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
+from hok_decision.data.splits import load_splits, split_of  # noqa: E402
 from hok_decision.model.attention_value import (  # noqa: E402
     CONTEXT_FEATURES,
     VALUE_FEATURES,
@@ -35,20 +35,6 @@ from hok_decision.model.attention_value import (  # noqa: E402
 HOKDATA_ROOT = Path(os.environ.get("HOKDATA_ROOT", str(Path(__file__).resolve().parents[1].parent / "hokdata")))
 DATASET = HOKDATA_ROOT / "dataset"
 LEVEL_MAP = {"1500+": 2, "1800+": 3, "2100+": 4, "2300+": 5, "2500+": 6, "赛事": 7}
-
-
-def _base_key(key: str) -> str:
-    return str(key).split("#", 1)[0]
-
-
-def _fallback_split(key: str, train: float = 0.70, val: float = 0.15) -> str:
-    """splits.json 缺失时的确定性按局切分，禁止随机切分。"""
-    bucket = int(hashlib.md5(key.encode("utf-8")).hexdigest()[:8], 16) / 0xFFFFFFFF
-    if bucket < train:
-        return "train"
-    if bucket < train + val:
-        return "val"
-    return "test"
 
 
 def _load_winners() -> dict[str, str]:
@@ -170,25 +156,11 @@ def main() -> int:
     c, f, y, report, bvs = _build_dataset()
     print(f"samples={c.shape[0]} labels_pos={y.sum().item()}/{y.shape[0]}")
 
-    split_path = HOKDATA_ROOT / "splits.json"
-    game_splits: dict[str, str] = {}
-    if split_path.exists():
-        payload = json.loads(split_path.read_text(encoding="utf-8"))
-        game_splits = payload.get("tencent_rt", {})
-        base_splits = payload.get("tencent_rt_base", {})
-        if base_splits:
-            game_splits = {**base_splits, **game_splits}
-    if game_splits:
-        def split_of(bv: str) -> str | None:
-            return game_splits.get(bv) or game_splits.get(_base_key(bv))
-    else:
-        print("splits.json 缺失：使用确定性 hash 按基础局切分")
-        def split_of(bv: str) -> str | None:
-            return _fallback_split(_base_key(bv))
+    game_splits = load_splits(HOKDATA_ROOT / "splits.json")
 
-    train_idx = [i for i, bv in enumerate(bvs) if split_of(bv) == "train"]
-    val_idx = [i for i, bv in enumerate(bvs) if split_of(bv) == "val"]
-    test_idx = [i for i, bv in enumerate(bvs) if split_of(bv) == "test"]
+    train_idx = [i for i, bv in enumerate(bvs) if split_of(game_splits, bv) == "train"]
+    val_idx = [i for i, bv in enumerate(bvs) if split_of(game_splits, bv) == "val"]
+    test_idx = [i for i, bv in enumerate(bvs) if split_of(game_splits, bv) == "test"]
     if not train_idx or not val_idx or not test_idx:
         raise SystemExit(f"split failed: train={len(train_idx)} val={len(val_idx)} test={len(test_idx)}")
     print(

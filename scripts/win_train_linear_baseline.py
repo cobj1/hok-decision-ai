@@ -22,6 +22,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 os.environ.setdefault("HOKDATA_ROOT", str(PROJECT_ROOT.parent / "hokdata"))
 
+from hok_decision.data.splits import load_splits, split_of  # noqa: E402
 from hok_decision.model.attention_value import CONTEXT_FEATURES, VALUE_FEATURES  # noqa: E402
 
 HOKDATA_ROOT = Path(os.environ["HOKDATA_ROOT"])
@@ -48,15 +49,11 @@ def main() -> int:
 
     module = _load_train_module()
     c, f, y, report, bvs = module._build_dataset()
-    splits = json.loads((HOKDATA_ROOT / "splits.json").read_text(encoding="utf-8"))
-    game_splits = {**splits.get("tencent_rt_base", {}), **splits.get("tencent_rt", {})}
+    game_splits = load_splits(HOKDATA_ROOT / "splits.json")
 
-    def split_of(bv: str) -> str | None:
-        return game_splits.get(bv) or game_splits.get(str(bv).split("#", 1)[0])
-
-    train_idx = [i for i, bv in enumerate(bvs) if split_of(bv) == "train"]
-    val_idx = [i for i, bv in enumerate(bvs) if split_of(bv) == "val"]
-    test_idx = [i for i, bv in enumerate(bvs) if split_of(bv) == "test"]
+    train_idx = [i for i, bv in enumerate(bvs) if split_of(game_splits, bv) == "train"]
+    val_idx = [i for i, bv in enumerate(bvs) if split_of(game_splits, bv) == "val"]
+    test_idx = [i for i, bv in enumerate(bvs) if split_of(game_splits, bv) == "test"]
     if not train_idx or not val_idx or not test_idx:
         raise SystemExit(f"split failed: {len(train_idx)}/{len(val_idx)}/{len(test_idx)}")
 

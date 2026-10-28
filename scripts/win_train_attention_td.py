@@ -26,6 +26,7 @@ import torch.nn as nn
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
+from hok_decision.data.splits import load_splits, split_of  # noqa: E402
 from hok_decision.model.attention_value import (  # noqa: E402
     CONTEXT_FEATURES,
     VALUE_FEATURES,
@@ -244,19 +245,9 @@ def main() -> int:
     print(f"samples={c.shape[0]} reward_mean={r.mean().item():.4f}")
     print("interval samples:", {INTERVALS[k]: v for k, v in sorted(Counter(interval_ids).items())})
 
-    split_path = HOKDATA_ROOT / "splits.json"
-    game_splits: dict[str, str] = {}
-    if split_path.exists():
-        game_splits = json.loads(split_path.read_text(encoding="utf-8")).get("tencent_rt", {})
-    if game_splits:
-        train_idx = [i for i, bv in enumerate(bvs) if game_splits.get(bv) == "train"]
-        val_idx = [i for i, bv in enumerate(bvs) if game_splits.get(bv) == "val"]
-    else:
-        game_ids = sorted(set(bvs))
-        n_train = max(1, int(len(game_ids) * 0.8))
-        train_games = set(game_ids[:n_train])
-        train_idx = [i for i, bv in enumerate(bvs) if bv in train_games]
-        val_idx = [i for i, bv in enumerate(bvs) if bv not in train_games]
+    game_splits = load_splits(HOKDATA_ROOT / "splits.json")
+    train_idx = [i for i, bv in enumerate(bvs) if split_of(game_splits, bv) == "train"]
+    val_idx = [i for i, bv in enumerate(bvs) if split_of(game_splits, bv) == "val"]
     if not train_idx or not val_idx:
         raise SystemExit(f"split failed: train={len(train_idx)} val={len(val_idx)}")
     print(
